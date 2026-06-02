@@ -1,0 +1,4 @@
+- nutrition awareness based on Grocery
+- Food and recipe suggestion
+- Taste finder based on grocery list
+- Couples money management agent
