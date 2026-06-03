@@ -1,0 +1,2666 @@
+{
+  "generated": "2026-06-03",
+  "purpose": "Product discovery - find high-potential datasets",
+  "sources_searched": 2,
+  "total_found": 137,
+  "by_category": {
+    "\u26a1 Energy": 3,
+    "\ud83c\udf0a Coastal & Marine": 3,
+    "\u2695\ufe0f Health & Safety": 32,
+    "Environment": 3,
+    "\ud83d\ude97 Transport & Logistics": 14,
+    "Business, industry and economy": 3,
+    "Arts, sport and leisure": 36,
+    "Education and learning": 3,
+    "\ud83c\udfd8\ufe0f Real Estate & Urban": 7,
+    "\ud83d\udccb Government & Admin": 20,
+    "Health and wellbeing": 1,
+    "Community support and care": 5,
+    "Driving, transport and travel": 4,
+    "\ud83e\udd81 Biodiversity": 1,
+    "Boating, fishing and marine": 2
+  },
+  "high_potential_count": 0,
+  "datasets": [
+    {
+      "title": "Northern Territory Mineral Titles",
+      "url": "https://data.nt.gov.au/dataset/strike---northern-territory-mineral-titles",
+      "publisher": "Mining and Energy",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "KML",
+        "SHP"
+      ],
+      "download_url": "https://geoscience.nt.gov.au/contents/prod/Downloads/NT_MineralTitles_kml.zip",
+      "last_updated": "2025-06-22",
+      "update_frequency": "Not specified",
+      "description": "The Department of Mining and Energy stores and manages current and historical mining tenure data within the Northern Territory jurisdiction as part of the provisions of the Mineral Titles Act, Petrole",
+      "geographic_coverage": "Australia",
+      "category": "\u26a1 Energy",
+      "product_score": 3,
+      "product_reasons": [
+        "Geospatial",
+        "High-opportunity domain"
+      ],
+      "num_resources": 4
+    },
+    {
+      "title": "Northern Territory Petroleum and Pipeline Titles",
+      "url": "https://data.nt.gov.au/dataset/strike---northern-territory-petroleum-and-pipeline-titles",
+      "publisher": "Mining and Energy",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "KML",
+        "SHP"
+      ],
+      "download_url": "https://geoscience.nt.gov.au/contents/prod/Downloads/NT_PetroleumPipelineTitles_kml.zip",
+      "last_updated": "2025-06-20",
+      "update_frequency": "Not specified",
+      "description": "The Department of Mining and Energy stores and manages current and historical mining tenure data within the Northern Territory jurisdiction as part of the provisions of the Mineral Titles Act, Petrole",
+      "geographic_coverage": "Australia",
+      "category": "\u26a1 Energy",
+      "product_score": 3,
+      "product_reasons": [
+        "Geospatial",
+        "High-opportunity domain"
+      ],
+      "num_resources": 4
+    },
+    {
+      "title": "Northern Territory Geothermal Titles",
+      "url": "https://data.nt.gov.au/dataset/strike---northern-territory-geothermal-title",
+      "publisher": "Mining and Energy",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "KML",
+        "SHP"
+      ],
+      "download_url": "https://geoscience.nt.gov.au/contents/prod/Downloads/NT_GeothermalTitles_kml.zip",
+      "last_updated": "2025-06-20",
+      "update_frequency": "Not specified",
+      "description": "The Department of Mining and Energy, Titles Division stores and manages current and historical petroleum, exploration and mining tenure data within the Northern Territory jurisdiction. Data includes s",
+      "geographic_coverage": "Australia",
+      "category": "\u26a1 Energy",
+      "product_score": 3,
+      "product_reasons": [
+        "Geospatial",
+        "High-opportunity domain"
+      ],
+      "num_resources": 4
+    },
+    {
+      "title": "Coastal Data System \u2013 Near real time wave data",
+      "url": "https://data.nt.gov.au/dataset/coastal-data-system-near-real-time-wave-data",
+      "publisher": "Environment, Tourism, Science and Innovation",
+      "license": "Creative Commons Attribution 4.0",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://apps.des.qld.gov.au/data-sets/waves/wave-7dayopdata.csv?timestamp=2026-06-03T21:03:02+10:00",
+      "last_updated": "2026-06-03",
+      "update_frequency": "non-regular",
+      "description": "Near real time wave and sea surface temperature data for selected sites along the Queensland coast.   \r\n\r\nFor more information please refer to [www.qld.gov.au/waves](https://www.qld.gov.au/waves).  \r\n",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udf0a Coastal & Marine",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 1
+    },
+    {
+      "title": "Coastal Data System \u2013 Near real time tide data",
+      "url": "https://data.nt.gov.au/dataset/coastal-data-system-tide-data",
+      "publisher": "Environment, Tourism, Science and Innovation",
+      "license": "Creative Commons Attribution 4.0",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://apps.des.qld.gov.au/data-sets/storm-tides/stdtide-7dayopdata.csv?timestamp=2026-06-03T21:03:02+10:00",
+      "last_updated": "2026-06-03",
+      "update_frequency": "near-realtime",
+      "description": "Actual, predicted and residual water level data, measured by  Tide gauges at coastal locations along the Queensland coast.",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udf0a Coastal & Marine",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 1
+    },
+    {
+      "title": "Coastal Data System \u2013 Near real time storm tide data",
+      "url": "https://data.nt.gov.au/dataset/coastal-data-system-near-real-time-storm-tide-data",
+      "publisher": "Environment, Tourism, Science and Innovation",
+      "license": "Creative Commons Attribution 4.0",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://apps.des.qld.gov.au/data-sets/storm-tides/tide-7dayopdata.csv?timestamp=2026-06-03T21:03:02+10:00",
+      "last_updated": "2026-06-03",
+      "update_frequency": "near-realtime",
+      "description": "Actual, predicted and residual water level data, measured by storm tide gauges at coastal locations along the Queensland coast.",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udf0a Coastal & Marine",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "Current - NT Crime Statistics March 2026",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-march-2026",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/2bf2a53f-c5d5-4015-9904-af9168bfa63c/resource/0f07bd67-7826-4a11-82af-7b71a14133a1/download/nt_crime_statistics_mar_2026.csv",
+      "last_updated": "2026-05-20",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics February 2026",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-february-2026",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/ae059a2d-e8ba-4850-bc16-f99b006c59b6/resource/bf9b0e6b-da94-4a11-bd34-b74b6c88582f/download/nt_crime_statistics_feb_2026.csv",
+      "last_updated": "2026-05-11",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics January 2026",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-january-2026",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/d13c0cd8-7732-4eea-9e2c-2e5730951341/resource/c3f0aa09-5d4a-4c29-9679-e974d51a3610/download/nt_crime_statistics_jan_2026.csv",
+      "last_updated": "2026-04-13",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics December 2025",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-december-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/6b63effe-866b-440b-a10a-4059e4629ec3/resource/e875aaf1-b3b9-4fb5-8dd1-b4018704878f/download/nt_crime_statistics_dec_2025.csv",
+      "last_updated": "2026-03-16",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "Mothers and Babies Report 2021",
+      "url": "https://data.nt.gov.au/dataset/https-hdl-handle-net-10137-14221",
+      "publisher": "Health",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/8d3d4b69-e235-4e8e-b0c3-9d2c079216fd/resource/9c489bbd-c3e4-41e4-9440-7105d864fd87/download/mothers-and-babies-tables-2021.xlsx",
+      "last_updated": "2026-02-19",
+      "update_frequency": "Not specified",
+      "description": "Data tables from the report 2021 Northern Territory (NT) Midwives\u2019 Collection. It includes population characteristics of mothers, maternal health status, antenatal information, conditions and procedur",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "Population estimates for Health Districts (1971 to 2025)",
+      "url": "https://data.nt.gov.au/dataset/population-estimates-for-health-districts-1971-to-2025",
+      "publisher": "Health",
+      "license": "License not specified",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/e903145c-98e6-4734-bc7b-209a4734f7dd/resource/ed3ddbda-3aa7-4fdf-b93a-fe7dd7e9fe2a/download/health-district-population-1971_2025.xlsx",
+      "last_updated": "2026-02-17",
+      "update_frequency": "Not specified",
+      "description": "This dataset provides annual population estimates for Health Districts from 1971 to 2025, stratified by age, sex, and Aboriginal status. The estimates are constructed using Census counts alongside the",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "Mothers and Babies Report 2014",
+      "url": "https://data.nt.gov.au/dataset/mothers-and-babies-report-2014",
+      "publisher": "Health",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/8fc4a745-67c6-44cf-87f9-8b0823de09a1/resource/9af5379e-a58b-44c9-9ad3-02ed67460ebb/download/mothers-and-babies-tables-2014.xlsx",
+      "last_updated": "2026-02-17",
+      "update_frequency": "Not specified",
+      "description": "Data tables from the report 2014 Northern Territory (NT) Midwives\u2019 Collection. It includes population characteristics of mothers, maternal health status, antenatal information, conditions and procedur",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "Mothers and Babies Report 2015",
+      "url": "https://data.nt.gov.au/dataset/mothers-and-babies-report-2015",
+      "publisher": "Health",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/2bc4f1cc-ac9e-44b0-a3bf-a053da789f62/resource/1918ee68-a6a6-4c96-92bf-5c7d4dede51b/download/mothers-and-babies-tables-2015.xlsx",
+      "last_updated": "2026-02-17",
+      "update_frequency": "Not specified",
+      "description": "Data tables from the report 2015 Northern Territory (NT) Midwives\u2019 Collection. It includes population characteristics of mothers, maternal health status, antenatal information, conditions and procedur",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Crime Statistics November 2025",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-november-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/8ba4cec0-ccd9-4e1a-b317-728ffe1fadef/resource/22969ed1-e536-4afd-b121-ddc54ae536df/download/nt_crime_statistics_nov_2025_m.csv",
+      "last_updated": "2026-02-17",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics October 2025",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-october-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/85f6e2b6-c05e-444c-9c56-b5351ae4867f/resource/7aabc032-1b53-4735-807d-1f75ae363227/download/nt_crime_statistics_oct_2025.csv",
+      "last_updated": "2026-01-16",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics September 2025",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-september-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/f837f983-797c-4fda-9842-22ba7088988c/resource/3700d656-4b8e-4035-8186-84f92c5c1e4a/download/nt_crime_statistics_sep_2025.csv",
+      "last_updated": "2025-12-18",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics August 2025",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-august-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/a6b6ca42-e82e-4a1d-89e8-039c2d8b00dd/resource/258cdc32-206d-4fc6-9668-c5c812daefd8/download/nt_crime_statistics_aug_2025.csv",
+      "last_updated": "2025-11-20",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics July 2025",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-july-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/9e3e23ca-51ce-4755-a8e4-8757efd4c455/resource/dc47f226-b9d0-4c0d-bd48-5f51deb811da/download/nt_crime_statistics_jul_2025.csv",
+      "last_updated": "2025-10-16",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics June 2025",
+      "url": "https://data.nt.gov.au/dataset/nt-crime-statistics-june-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/1511fa51-6e9e-44fb-aaa3-5a6afa268281/resource/d5981514-e28d-40e0-b4ee-c7019ff43829/download/nt_crime_statistics_jun_2025.csv",
+      "last_updated": "2025-09-08",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics May 2025",
+      "url": "https://data.nt.gov.au/dataset/nt-crime-statistics-may-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/03c3a3f0-765c-42bc-a4a1-07a552ddc415/resource/badbe230-aecc-4056-b17d-6d259f43a7bb/download/nt_crime_statistics_may_2025.csv",
+      "last_updated": "2025-08-14",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics April 2025",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-april-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/9641799d-3a12-4d6f-8159-a7fa2c6f9a03/resource/9e9e86ad-f524-4688-8b85-b10833b60f11/download/nt_crime_statistics_apr_2025_updated.csv",
+      "last_updated": "2025-07-17",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics March  2025",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-march-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/3875ba5e-3b03-4124-a22d-0f741c6595cf/resource/4aa3dc49-8f55-484a-b9ab-774c0a341b1e/download/nt_crime_statistics_mar_2025.csv",
+      "last_updated": "2025-06-23",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "Northern Territory Geological Survey - Geochemistry - All Rocks",
+      "url": "https://data.nt.gov.au/dataset/northern-territory-geological-survey-geochemistry-all-rocks",
+      "publisher": "Mining and Energy",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "SHP",
+        "CSV"
+      ],
+      "download_url": "https://geoscience.nt.gov.au/contents/prod/Downloads/Geochemistry/GEOCHEMISTRY_ALLROCKS_shp.zip",
+      "last_updated": "2025-04-23",
+      "update_frequency": "Not specified",
+      "description": "This Northern Territory Geological Survey (NTGS) Geochemistry dataset contains information on open file geochemical data from companies and/or the NTGS, collected for samples where the Sample Method m",
+      "geographic_coverage": "Australia",
+      "category": "Environment",
+      "product_score": 2,
+      "product_reasons": [
+        "Geospatial"
+      ],
+      "num_resources": 4
+    },
+    {
+      "title": "Northern Territory Geological Survey - Geochemistry - Soil",
+      "url": "https://data.nt.gov.au/dataset/northern-territory-geological-survey-geochemistry-soil",
+      "publisher": "Mining and Energy",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "SHP",
+        "CSV"
+      ],
+      "download_url": "https://geoscience.nt.gov.au/contents/prod/Downloads/Geochemistry/GEOCHEMISTRY_SOILS_shp.zip",
+      "last_updated": "2025-04-23",
+      "update_frequency": "Not specified",
+      "description": "Northern Territory Geological Survey (NTGS) Geochemistry datasets contain information on available open file geochemical data from companies and/or the NTGS collected on soil samples defined as sample",
+      "geographic_coverage": "Australia",
+      "category": "Environment",
+      "product_score": 2,
+      "product_reasons": [
+        "Geospatial"
+      ],
+      "num_resources": 4
+    },
+    {
+      "title": "NT Crime Statistics February 2025",
+      "url": "https://data.nt.gov.au/dataset/nt-crime-statistics-february-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/abccaf22-b395-422c-898f-dd4c5a9aaad1/resource/e402aba4-43b4-467f-bf0b-322d5808670f/download/nt_crime_statistics_feb_2025.csv",
+      "last_updated": "2025-04-18",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "Northern Territory Geological Survey - Geochemistry - Stream Sediment",
+      "url": "https://data.nt.gov.au/dataset/northern-territory-geological-survey-geochemistry-stream-sediment",
+      "publisher": "Mining and Energy",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "SHP",
+        "CSV"
+      ],
+      "download_url": "https://geoscience.nt.gov.au/contents/prod/Downloads/Geochemistry/GEOCHEMISTRY_STREAMS_shp.zip",
+      "last_updated": "2025-04-11",
+      "update_frequency": "Not specified",
+      "description": "Northern Territory Geological Survey (NTGS) Geochemistry datasets contain information on available open file geochemical data from companies and/or the NTGS collected on stream sediments. The data is ",
+      "geographic_coverage": "Australia",
+      "category": "Environment",
+      "product_score": 2,
+      "product_reasons": [
+        "Geospatial"
+      ],
+      "num_resources": 4
+    },
+    {
+      "title": "Listed Waste Company Summary",
+      "url": "https://data.nt.gov.au/dataset/listed-waste-company-summary",
+      "publisher": "Environment Protection Authority",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fntepa.nt.gov.au%2F__data%2Fassets%2Fexcel_doc%2F0006%2F285720%2Flisted-waste-company-summary-update-march2025.xlsx&wdOrigin=BROWSELINK",
+      "last_updated": "2025-04-03",
+      "update_frequency": "Not specified",
+      "description": "A summary list is available to assist in identifying what companies are licensed to handle what type of  listed waste(s) and how (e.g. collect, transport, store, treat, recycle or dispose) they are li",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 1
+    },
+    {
+      "title": "NT Crime Statistics January 2025",
+      "url": "https://data.nt.gov.au/dataset/nt-crime-statistics-january-2025",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/68ad4bb7-0f8b-414d-a352-55394a59e077/resource/b28a15d9-5aed-4201-bdcd-52b29ad96747/download/nt_crime_statistics_jan_2025.csv",
+      "last_updated": "2025-03-21",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics December 2024",
+      "url": "https://data.nt.gov.au/dataset/nt-crime-statistics-december-2024",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/dc436b46-95d7-4c6c-bb61-17744f7ec5af/resource/97653c2c-b1f0-4346-aae4-76462b9b934a/download/nt_crime_statistics_dec_2024.csv",
+      "last_updated": "2025-03-04",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics November 2024",
+      "url": "https://data.nt.gov.au/dataset/nt-crime-statistics-november-2024",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/0b6ee6b5-b3eb-4ec2-b7e5-f8ea92281704/resource/ee9a9bda-084e-4627-bd75-fcd1b3d39654/download/nt_crime_statistics_nov_2024.csv",
+      "last_updated": "2025-01-31",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics September 2024",
+      "url": "https://data.nt.gov.au/dataset/nt-crime-statistics-september-2024",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/920c5d7c-965c-4c97-a6d7-4dcd4dab1b45/resource/64781a44-4113-4648-bd82-1503bee40c4e/download/nt_crime_statistics_sep_2024.csv",
+      "last_updated": "2024-11-13",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "NT Crime Statistics July 2024",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-july-2024",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/bdf23e49-e093-456c-bc22-0f94c9ffc8f3/resource/e70d682f-9855-488a-8311-28c1c2d28c0c/download/nt_crime_statistics_jul_2024.csv",
+      "last_updated": "2024-11-07",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "Youth Detention Population in Australia 2019",
+      "url": "https://data.nt.gov.au/dataset/youth-detention-population-in-australia-2019",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://www.aihw.gov.au/getmedia/2c41a002-4e4d-4058-bfa1-245b5976e487/aihw-juv-131-supplementary-tables.xlsx.aspx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "The bulletin compares the numbers and rates of young people aged 10 and over who were in youth detention in Australia due to their involvement, or alleged involvement, in crime. It focuses on trends o",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "Youth Detention Population in Australia 2018",
+      "url": "https://data.nt.gov.au/dataset/youth-detention-population-in-australia-2018",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://www.aihw.gov.au/getmedia/993d8e77-b18e-4482-b9b9-12fe838db158/aihw-juv-128-youth-detention-population-in-Australia-2018-data-tables.xlsx.aspx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "This bulletin looks at the numbers and rates of young people aged 10 and over who were in youth detention in Australia due to their involvement, or alleged involvement, in crime. It focuses on trends ",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "Youth Justice in Australia 2018-19",
+      "url": "https://data.nt.gov.au/dataset/youth-justice-in-australia-2018-19",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://www.aihw.gov.au/getmedia/d19d6cee-0cb3-423e-87e1-045ed075d171/aihw-juv-132-All-supervision-tables-2018-19.xlsx.aspx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "This report looks at young people who were under youth justice supervision in Australia during 2018\u201319 because of their involvement or alleged involvement in crime. It explores the key aspects of supe",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 6
+    },
+    {
+      "title": "Youth Justice in Australia 2017\u201318",
+      "url": "https://data.nt.gov.au/dataset/youth-justice-in-australia-2017-18",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://www.aihw.gov.au/getmedia/b0195291-1960-4404-9df0-6ba31d0c6613/Datatables-All-youth-justice-supervision-tables.xlsx.aspx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "This report looks at young people who were under youth justice supervision in Australia during 2017\u201318 because of their involvement or alleged involvement in crime. It explores the key aspects of supe",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 6
+    },
+    {
+      "title": "Youth Justice in Australia 2016\u201317",
+      "url": "https://data.nt.gov.au/dataset/youth-justice-in-australia-2016-17",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://www.aihw.gov.au/getmedia/368e7913-c8eb-4ef1-a5f3-4d7346866103/aihw-juv-116-community-based-supervision-s36-to-s73-2016-17-data-table.xlsx.aspx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "This report looks at young people who were under youth justice supervision in Australia during 2016\u201317 because of their involvement or alleged involvement in crime. It explores the key aspects of supe",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 6
+    },
+    {
+      "title": "NT Tourism Free WiFi Traffic Summary January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-traffic-summary-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/c26df43a-212e-452b-8402-28680214eb8d/resource/0590caee-237d-4ca0-982a-c7a3ef40577f/download/nt-tourism-free-wifi-traffic-summary-jan-jun2020.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Total measurements of NT Tourism Free WiFi Traffic for six months.",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Traffic by Hotspot January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-traffic-by-hotspot-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/33fc36ba-18ba-47dd-8b99-b8fa6ccbf4ee/resource/1eb37f60-38f2-4957-bc94-69744a2f70bc/download/nt-tourism-free-wifi-traffic-by-hotspot-2020-a.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Measurements of traffic for each NT Tourism Free WiFi Hotspot for six months",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Traffic by Hotspot July - December 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-traffic-by-hotspot-july-december-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/2e158823-a611-4c1c-a244-cefd4687a132/resource/a985ed6a-63de-4e23-929b-82521b4edef8/download/nt-tourism-free-wifi-sessions-by-hotspot-dec-2020.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Measurements of traffic for each NT Tourism Free WiFi Hotspot for six months",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Traffic by Hotspot January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-traffic-by-hotspot",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/1dc8fe5c-959d-41cc-b224-6b9072f489cf/resource/7ee5727d-8d92-4f71-a2af-d097e88c26bb/download/10-nt-tourism-free-wifi-traffic-by-hotspot-jan-jun-2019.csv.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Measurements of traffic for each NT Tourism Free WiFi Hotspot for six months      ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Traffic Summary January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-traffic-summary",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/cfc0773f-dc70-4904-9d5c-38f1fbb18813/resource/90d06683-2cd3-4237-92b0-3d65b8541786/download/07-nt-tourism-free-wifi-traffic-summary-jan-jun-2019.csv.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Total measurements of NT Tourism Free WiFi Traffic for six months.",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Traffic by Hotspot July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-traffic-by-hotspot-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/a1bf6a8c-4b5c-478b-af94-f361f32ed7fd/resource/8ed4b5d3-bfc2-4f09-bc76-7555db410319/download/10-nt-tourism-free-wifi-traffic-by-hotspot-july-december-2019.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Measurements of traffic for each NT Tourism Free WiFi Hotspot for six months  ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Traffic Summary July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-traffic-summary-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/952c8594-d192-40de-9907-7847bfeece74/resource/17a4745f-6c18-4d68-883e-943b3dd64d3a/download/07-nt-tourism-free-wifi-traffic-summary-july-december-2019.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Total measurements of NT Tourism Free WiFi Traffic for six months. ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Crime Statistics June 2024",
+      "url": "https://data.nt.gov.au/dataset/current-nt-crime-statistics-june-2024",
+      "publisher": "Attorney-General\u2019s",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/0a3c7c70-0538-4c82-81e5-f5aa4da54a66/resource/0b05d789-f799-4593-bc69-36f169c19e7b/download/nt_crime_statistics_jun_2024.csv",
+      "last_updated": "2024-09-12",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains counts of offences recorded by the NT Police, categorised by offence type, time period (month), location and (for assault offences) alcohol and domestic violence involvement. Cer",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 3
+    },
+    {
+      "title": "Annual Traffic Report 2023",
+      "url": "https://data.nt.gov.au/dataset/annual-traffic-report-2023",
+      "publisher": "Logistics and Infrastructure",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLS",
+        "XLS",
+        "XLS",
+        "XLS",
+        "XLS",
+        "XLSX",
+        "XLS",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/3fba4ed5-f87c-4b39-b78e-b2a289b6aa34/resource/0eaaf7ea-4ca8-4c68-bb08-e374f1ec7b6e/download/1.1-urban_primary_10_year_aadt.xls",
+      "last_updated": "2024-08-27",
+      "update_frequency": "Not specified",
+      "description": "The urban and rural traffic counting programme is monitored by a network of traffic stations in the four major urban centres (Darwin, Katherine, Tennant Creek & Alice Springs), and in all rural areas ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 19
+    },
+    {
+      "title": "Annual Traffic Report 2022",
+      "url": "https://data.nt.gov.au/dataset/annual-traffic-report-2022",
+      "publisher": "Logistics and Infrastructure",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLS",
+        "XLS",
+        "XLS",
+        "XLS",
+        "XLS",
+        "XLS",
+        "XLS",
+        "XLS",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/28fe9af8-887b-423a-ae16-35516dc99236/resource/4d4324f8-6799-4aa6-b4d2-77c9930f864f/download/1.1-urban_primary_10_year_aadt.xls",
+      "last_updated": "2024-08-27",
+      "update_frequency": "Not specified",
+      "description": "The urban and rural traffic counting programme is monitored by a network of traffic stations in the four major urban centres (Darwin, Katherine, Tennant Creek & Alice Springs), and in all rural areas ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 2,
+      "product_reasons": [
+        "High-opportunity domain"
+      ],
+      "num_resources": 16
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Quarter, 2025",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-by-quarter-2025",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/77e89d79-8adf-4b6c-9996-fb2add12146b/resource/f2782615-7d47-4e5f-8fc0-4c3b3a7fb14a/download/wholesale-alcohol-supply-by-quarter-2025.xlsx",
+      "last_updated": "2026-05-20",
+      "update_frequency": "Not specified",
+      "description": "This dataset supersedes the following previously published datasets:\r\n\r\nWholesale Alcohol Supply, March Quarter 2025\r\n\r\nWholesale Alcohol Supply, Jun Quarter 2025\r\n\r\nThis version also supersedes the v",
+      "geographic_coverage": "Australia",
+      "category": "Business, industry and economy",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Population estimates for NTG Service Regions (1986 to 2025)",
+      "url": "https://data.nt.gov.au/dataset/nt-government-regions-1986-2025",
+      "publisher": "Health",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/2f31e368-9b1f-4bd3-993f-8e01bee5c578/resource/754fb4e0-33d8-4641-b06e-4e867407a171/download/nt-government-regions_1986-to-2025.xlsx",
+      "last_updated": "2026-02-24",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains annual population estimates for the NTG Service Regions, disaggregated by age, sex, and Aboriginal status, for the years 1986 to 2025. These estimates are based on Estimated Resi",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Quarter, 2024",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-by-quarter-2024",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/04a2898a-d015-4c4d-9590-d68e3f3eb4ad/resource/dfa98f01-884b-46b3-a653-5b73b4a7fd88/download/wholesale-alcohol-supply-by-quarter-2024.xlsx",
+      "last_updated": "2026-02-05",
+      "update_frequency": "Not specified",
+      "description": "This dataset supersedes the following previously published datasets:\r\n\r\nWholesale Alcohol Supply, March Quarter 2024\r\n\r\nWholesale Alcohol Supply, June Quarter 2024\r\n\r\nWholesale Alcohol Supply, Septemb",
+      "geographic_coverage": "Australia",
+      "category": "Business, industry and economy",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "School Suspensions Semester 1 2025 by Region",
+      "url": "https://data.nt.gov.au/dataset/school-suspensions-semester-1-2025-by-region",
+      "publisher": "Education and Training",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/6aa5274f-68e3-4ca6-a605-1b749a4a3354/resource/d7568808-0b50-4bc1-ba28-30dc52c28784/download/school-suspensions-semester-1-2025-by-region.xlsx",
+      "last_updated": "2026-01-19",
+      "update_frequency": "Not specified",
+      "description": "Data in this report is sourced from the Northern Territory (NT) Department of Education's enrolment and attendance and behaviour datasets. Data is current at the time of publication. The average enrol",
+      "geographic_coverage": "Australia",
+      "category": "Education and learning",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Super Tuesday Bike Count Tennant Creek and Alice Springs 2025",
+      "url": "https://data.nt.gov.au/dataset/super-tuesday-bike-count-tennant-creek-and-alice-springs-2025",
+      "publisher": "Logistics and Infrastructure",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://dli.nt.gov.au/__data/assets/file/0007/1573783/stn25-raw-data-alice-springs-tennant-creek.csv",
+      "last_updated": "2025-12-11",
+      "update_frequency": "Not specified",
+      "description": "The Super Tuesday Commuter Bike Count collects reliable annual figures of bicycle commuters and their movements on roads and bike paths.    ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Super Tuesday Bike Count Palmerston 2025",
+      "url": "https://data.nt.gov.au/dataset/super-tuesday-bike-count-palmerston-2025",
+      "publisher": "Logistics and Infrastructure",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://dli.nt.gov.au/__data/assets/file/0005/1568903/stte-25-palmerston.csv",
+      "last_updated": "2025-12-11",
+      "update_frequency": "Not specified",
+      "description": "The Super Tuesday Commuter Bike Count collects reliable annual figures of bicycle commuters and their movements on roads and bike paths.  ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Super Tuesday Bike Count Katherine 2025",
+      "url": "https://data.nt.gov.au/dataset/super-tuesday-bike-count-katherine-2025",
+      "publisher": "Logistics and Infrastructure",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://dli.nt.gov.au/__data/assets/file/0004/1568902/stte-25-katherine.csv",
+      "last_updated": "2025-12-11",
+      "update_frequency": "Not specified",
+      "description": "The Super Tuesday Commuter Bike Count collects reliable annual figures of bicycle commuters and their movements on roads and bike paths.",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Super Tuesday Bike Count Darwin 2025",
+      "url": "https://data.nt.gov.au/dataset/super-tuesday-bike-count-darwin-2025",
+      "publisher": "Logistics and Infrastructure",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://dli.nt.gov.au/__data/assets/file/0003/1568901/stte-25-darwin.csv",
+      "last_updated": "2025-12-11",
+      "update_frequency": "Not specified",
+      "description": "The Super Tuesday Commuter Bike Count collects reliable annual figures of bicycle commuters and their movements on roads and bike paths.",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\ude97 Transport & Logistics",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Quarter, 2023",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-by-quarter-2023",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/d2568036-2ae9-48c6-a425-87764862da3c/resource/7bd8eee2-287e-4ced-bde5-2c3080594e82/download/wholesale-alcohol-supply-by-quarter-2023.xlsx",
+      "last_updated": "2025-11-19",
+      "update_frequency": "Not specified",
+      "description": "This dataset supersedes the following previously published datasets:\r\n\r\nWholesale Alcohol Supply, March Quarter 2023\r\n\r\nWholesale Alcohol Supply, June Quarter 2023\r\n\r\nWholesale Alcohol Supply, Septemb",
+      "geographic_coverage": "Australia",
+      "category": "Business, industry and economy",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Year, 2017-2024",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-by-year-2017-2024",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/421b41fe-62fd-4c29-8b2e-9be241c5a09a/resource/9d0a28ac-297d-494e-9349-4b7b8384e875/download/wholesale-alcohol-supply-by-year-2017-2024.xlsx",
+      "last_updated": "2025-11-12",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Tourism and Hospitality with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bottle",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Year, 2016-2023",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-by-year-2016-2023",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/b1731e16-b5c7-4d32-a076-c89dd3f0bc4b/resource/728d1a82-628b-454d-8bd9-1bd37a582210/download/wholesale-alcohol-supply-by-year-2016-2023.xlsx",
+      "last_updated": "2025-11-12",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Tourism and Hospitality with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bottle",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "NT Parks and Reserves Land Holdings List 2024",
+      "url": "https://data.nt.gov.au/dataset/nt-parks-and-reserves-land-holdings-list-2024",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/06056af4-d8b9-46e1-994d-8373d1fada75/resource/7c9428c0-a7be-47c0-b8a0-8d2e44115945/download/nt_parks_reserves_open_data_06112024.xlsx",
+      "last_updated": "2025-11-05",
+      "update_frequency": "Not specified",
+      "description": "Official list of protected areas that are actively managed by Parks and Wildlife Commission of the Northern Territory.\r\n\r\nArea values are primarily based on official land administration records where ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udfd8\ufe0f Real Estate & Urban",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Wholesale Alcohol Supply, Jun Quarter 2025",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-jun-quarter-2025",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/f6d60b23-1a79-4cb9-9dc4-ed8afcf52d77/resource/64229af2-6053-40c9-88e1-807fb672d575/download/wholesale-supply-statistics-2025_06.xlsx",
+      "last_updated": "2025-10-13",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Tourism and Hospitality with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bottle",
+      "geographic_coverage": "Australia",
+      "category": "\u2695\ufe0f Health & Safety",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "School Suspensions 2024 by Region",
+      "url": "https://data.nt.gov.au/dataset/school-suspensions-2024-by-region",
+      "publisher": "Education and Training",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX",
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/debc7bc8-075a-4a43-9d1d-11bf1548dbb4/resource/0d62c155-40b6-416b-89e4-f3d3f674fd1e/download/school-suspensions-semester-1-2024-by-region.xlsx",
+      "last_updated": "2025-08-22",
+      "update_frequency": "Not specified",
+      "description": "From 2023, suspension data is reported every semester.\r\n\r\nData in this report is sourced from the Northern Territory (NT) Department of Education's enrolment and attendance and behaviour datasets. Dat",
+      "geographic_coverage": "Australia",
+      "category": "Education and learning",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 4
+    },
+    {
+      "title": "Wholesale Alcohol Supply, December Quarter 2024",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-december-quarter-2024",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/108eef28-b1b5-48e8-a66b-12c64d8cbe61/resource/d9384f8c-6356-450c-a4eb-7a8692f3c9db/download/wholesale-supply-statistics-2024_12-v2.xlsx",
+      "last_updated": "2025-05-30",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Story of Our Children and Young People",
+      "url": "https://data.nt.gov.au/dataset/story-of-our-children-and-young-people",
+      "publisher": "Chief Minister and Cabinet",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://dcm.nt.gov.au/__data/assets/excel_doc/0005/821876/data-tables-story-of-children.xlsx",
+      "last_updated": "2025-05-28",
+      "update_frequency": "Not specified",
+      "description": "The Story of Our Children and Young People is a comprehensive overview of the wellbeing of our children and young people. Forty-eight key indicators, mapped over six domains, measure wellbeing from th",
+      "geographic_coverage": "Australia",
+      "category": "Health and wellbeing",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Story of Our Children and Young People 2021 Update",
+      "url": "https://data.nt.gov.au/dataset/story-of-our-children-and-young-people-2021-update",
+      "publisher": "Chief Minister and Cabinet",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://cmc.nt.gov.au/__data/assets/excel_doc/0009/1084824/2021-Story-data-table.xlsx",
+      "last_updated": "2025-05-28",
+      "update_frequency": "Not specified",
+      "description": "The Story of Our Children and Young People is a comprehensive overview of the wellbeing of our children and young people. The Story presents data across key indicators, mapped over six domains, measur",
+      "geographic_coverage": "Australia",
+      "category": "Community support and care",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Average Weekly Juveniles in Detention to March 2020",
+      "url": "https://data.nt.gov.au/dataset/average-weekly-juveniles-in-detention-to-march-2020",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/9bad4acb-1a06-4d39-b5bb-d802c8491e5b/resource/ccb07334-8159-47d9-ad98-519d03fd0365/download/average-weekly-juveniles-in-detention.csv",
+      "last_updated": "2025-04-03",
+      "update_frequency": "Not specified",
+      "description": "The average weekly youth in detention dataset is tabulated from facility daily census records sourced from Daily Statistics Database. It contains the weekly summary count of youth by gender, aborigina",
+      "geographic_coverage": "Australia",
+      "category": "Community support and care",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 4
+    },
+    {
+      "title": "Average Weekly Juveniles in Detention September 2019",
+      "url": "https://data.nt.gov.au/dataset/average-weekly-juveniles-in-detention",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/1b7a7f04-2e6e-4288-a553-cd44676e6739/resource/1c5053fd-1e34-4074-83c8-2e5012967823/download/average-weekly-juveniles-in-detention-to-sep-2019.csv",
+      "last_updated": "2025-04-03",
+      "update_frequency": "Not specified",
+      "description": "The average weekly youth in detention dataset is tabulated from facility daily census records sourced from Daily Statistics Database.  It contains the weekly summary count of youth by gender, aborigin",
+      "geographic_coverage": "Australia",
+      "category": "Community support and care",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "Average Weekly Juveniles in Detention to December 2019",
+      "url": "https://data.nt.gov.au/dataset/average-weekly-juveniles-in-detention-to-december-2019",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/70bc917c-6711-4bb1-a902-6ffb88a6c681/resource/60584851-8ba9-4533-910c-dec93e3cfbdf/download/average-weekly-juveniles-in-detention-december-2019.csv",
+      "last_updated": "2025-04-03",
+      "update_frequency": "Not specified",
+      "description": "The average weekly youth in detention dataset is tabulated from facility daily census records sourced from Daily Statistics Database. It contains the weekly summary count of youth by gender, aborigina",
+      "geographic_coverage": "Australia",
+      "category": "Community support and care",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "School Suspensions Semester 1 2024 by Region",
+      "url": "https://data.nt.gov.au/dataset/school-suspensions-semester-1-2024-by-region",
+      "publisher": "Education and Training",
+      "license": "License not specified",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/c297ef5f-2e03-4848-bd95-25a950f76f27/resource/cacf862f-93c9-47a4-9ad0-8d3a0989b647/download/school-suspensions-semester-1-2024-by-region.xlsx",
+      "last_updated": "2025-02-11",
+      "update_frequency": "Not specified",
+      "description": "Data in this report is sourced from the Northern Territory (NT) Department of Education's enrolment and attendance and behaviour datasets. Data is current at the time of publication. The average enrol",
+      "geographic_coverage": "Australia",
+      "category": "Education and learning",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply, September Quarter 2024",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-september-quarter-2024",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/c4dcf828-e4a2-46f5-9d7e-6d207958a851/resource/cea8fa50-a6a5-4793-a2d7-008ff6a8ec97/download/wholesale-alcohol-supply-september-quarter-2024.xlsx",
+      "last_updated": "2025-02-10",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Territory ANZACS",
+      "url": "https://data.nt.gov.au/dataset/territory-anzacs",
+      "publisher": "People, Sport and Culture",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/46875c93-8bba-4175-a294-44f22902088c/resource/faddb7a7-0073-4529-aa0d-f71eb9c4c071/download/territory_anzacs.xlsx",
+      "last_updated": "2024-12-18",
+      "update_frequency": "Not specified",
+      "description": "The Territory ANZACS Collection includes data describing the personal stories of over 400 soldiers who enlisted in the Northern Territory, travelled from the Northern Territory to enlist or had a stro",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "MyFuel NT August 2024",
+      "url": "https://data.nt.gov.au/dataset/myfuel-nt-august-2024",
+      "publisher": "Treasury and Finance",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/53a9cfd5-dcf2-419c-94fd-90b778647fbe/resource/624cdd3e-11bf-4082-96f0-65f738e8547a/download/treasury-report-31-july-2024-to-1-sept-2024.xlsx",
+      "last_updated": "2024-12-10",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains historical daily fuel prices from retail fuel outlets across the Northern Territory for August 2024.",
+      "geographic_coverage": "Australia",
+      "category": "Driving, transport and travel",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "MyFuel NT September 2024",
+      "url": "https://data.nt.gov.au/dataset/myfuel-nt-september-2024",
+      "publisher": "Treasury and Finance",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/211b7e43-718d-4c17-b7bc-9f16bc9c053e/resource/6850309e-e2bb-496f-82a4-2d97bda0006d/download/treasury-report-31-aug-to-1-oct-2024.xlsx",
+      "last_updated": "2024-12-10",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains historical daily fuel prices from retail fuel outlets across the Northern Territory for September 2024.",
+      "geographic_coverage": "Australia",
+      "category": "Driving, transport and travel",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "MyFuel NT October 2024",
+      "url": "https://data.nt.gov.au/dataset/myfuel-nt-october-2024",
+      "publisher": "Treasury and Finance",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/94c713f9-bcf1-4d09-81d1-960baa55c99a/resource/fe7e863e-845c-48ad-a4b8-492549c8a9f0/download/treasury-report-30-sept-2024-to-1-nov-2024.xlsx",
+      "last_updated": "2024-12-10",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains historical daily fuel prices from retail fuel outlets across the Northern Territory for October 2024.",
+      "geographic_coverage": "Australia",
+      "category": "Driving, transport and travel",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "MyFuel NT November 2024",
+      "url": "https://data.nt.gov.au/dataset/myfuel-nt-november-2024",
+      "publisher": "Treasury and Finance",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/17494f71-4e8d-4672-824d-7aaf61b3610a/resource/2cead0c3-78e6-4802-ab2d-7aeb091ce1f7/download/treasury-report-31-oct-to-01-dec-2024.xlsx",
+      "last_updated": "2024-12-10",
+      "update_frequency": "Not specified",
+      "description": "This dataset contains historical daily fuel prices from retail fuel outlets across the Northern Territory for November 2024.",
+      "geographic_coverage": "Australia",
+      "category": "Driving, transport and travel",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply, June Quarter 2024",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-june-2024",
+      "publisher": "Tourism and Hospitality",
+      "license": "License not specified",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/c2d768d2-2937-4247-ad35-8a3775070d1d/resource/519699d5-5e4d-4437-94db-004c47b5f674/download/wholesale-supply-statistics-2024_06.xlsx",
+      "last_updated": "2024-10-03",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Goyder survey expedition",
+      "url": "https://data.nt.gov.au/dataset/goyder-survey-expedition",
+      "publisher": "People, Sport and Culture",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/c31dac5e-b874-4059-9456-5aaba0b5c7e4/resource/ba365fb0-3435-449f-bf1d-e4040ea2b7a4/download/goyder-survey-expedition.xlsx",
+      "last_updated": "2024-10-03",
+      "update_frequency": "Not specified",
+      "description": "The Goyder survey expedition contains stereoscopic photographs depicting members of the expedition, the new settlement and the surrounding scenery, taken during the Goyder Expedition, and diaries kept",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "World War II",
+      "url": "https://data.nt.gov.au/dataset/world-war-ii",
+      "publisher": "People, Sport and Culture",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/dd74da90-4fe5-4f20-b90f-1cc78025c12d/resource/c6c06022-025e-41af-b91a-19c5ec1f50c5/download/second-world-war_1939-1945.xlsx",
+      "last_updated": "2024-10-03",
+      "update_frequency": "Not specified",
+      "description": "Northern Territory Library's World War II collection includes unique objects, documents and records that help to illustrate what life was like in wartime in the Northern Territory. The dataset include",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "Cyclone Tracy collection",
+      "url": "https://data.nt.gov.au/dataset/cyclone-tracy-collection",
+      "publisher": "People, Sport and Culture",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/ed662ae4-956c-4e69-aeb6-ebfa1783e98f/resource/1b84fd81-5e32-47e9-afaf-165c4fa765ec/download/cyclone-tracy-collection.xlsx",
+      "last_updated": "2024-10-03",
+      "update_frequency": "Not specified",
+      "description": "The Cyclone Tracy collection pays tribute to the victims and survivors of this tragedy by preserving documents, photographs, recordings and personal stories about the cyclone and its aftermath. The da",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "Child Protection Services - Report on Government Services 2020",
+      "url": "https://data.nt.gov.au/dataset/child-protection-services-report-on-government-services-2020",
+      "publisher": "Children and Families",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://www.pc.gov.au/research/ongoing/report-on-government-services/2020/community-services/child-protection/rogs-2020-partf-section16-data-tables.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "This section reports on the performance of governments in providing child protection, out-of-home care, family support services and intensive family support services. \r\n\r\nSource: Productivity Commissi",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Child Protection Services - Report on Government Services 2019",
+      "url": "https://data.nt.gov.au/dataset/child-protection-services-report-on-government-services-2019",
+      "publisher": "Children and Families",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://www.pc.gov.au/research/ongoing/report-on-government-services/2019/community-services/child-protection/rogs-2019-partf-chapter16-attachment.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "This chapter reports on the performance of governments in providing child protection, out-of-home care, family support services and intensive family support services. \r\n\r\nSource: Productivity Commissi",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Average Weekly Juveniles in Detention - Current",
+      "url": "https://data.nt.gov.au/dataset/average-weekly-juveniles-in-detention-current",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX",
+        "XLSX"
+      ],
+      "download_url": "https://tfhc.nt.gov.au?a=965442",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "The average weekly youth in detention dataset is tabulated from facility daily census records sourced from Daily Statistics Database. It contains the weekly summary count of youth by gender, aborigina",
+      "geographic_coverage": "Australia",
+      "category": "Community support and care",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 4
+    },
+    {
+      "title": "Youth Justice Services - Report on Government Services 2020",
+      "url": "https://data.nt.gov.au/dataset/youth-justice-services-report-on-government-services-2020",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://www.pc.gov.au/research/ongoing/report-on-government-services/2020/community-services/youth-justice/rogs-2020-partf-section17-data-tables.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "This section reports on the performance of governments in providing youth justice services.\r\n\r\nSource: Productivity Commission, Youth Justice Services - Report on Government Services",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Youth Justice Services - Report on Government Services 2019",
+      "url": "https://data.nt.gov.au/dataset/youth-justice-services-report-on-government-services-2019",
+      "publisher": "Corrections ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://www.pc.gov.au/research/ongoing/report-on-government-services/2019/community-services/youth-justice/rogs-2019-partf-chapter17-attachment.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "This chapter reports on the performance of governments in providing youth justice services.\r\n\r\nSource: Productivity Commission, Youth Justice Services - Report on Government Services",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Urban Sport Voucher and Learn to Swim Data",
+      "url": "https://data.nt.gov.au/dataset/urban-sport-voucher-and-learn-to-swim-data",
+      "publisher": "People, Sport and Culture",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/1839b9e2-2b7b-454c-9f37-9e48b832f618/resource/6284fa9e-1b6f-4afb-85d9-e3935f3ed8fe/download/sport-voucher-dataset.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Contains the monthly number of redeemed urban sport and learn to swim vouchers by region since\r\nthe program started. ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udfd8\ufe0f Real Estate & Urban",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Urban Public Housing Wait Times, Wait List and Allocations December 2020",
+      "url": "https://data.nt.gov.au/dataset/urban-public-housing-wait-times-wait-list-and-allocations-december-2020",
+      "publisher": "Housing, Local Government and Community Development ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/2dcfe0b7-6b4d-4633-9761-cc6128d1bbfb/resource/3e6fef35-1eb4-4387-ab06-80e422652ab5/download/open-data-urban-public-housing-wait-times-wait-list-and-allocations-31-december-2020.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Summary information for Urban Public Housing Wait Times, Wait List (Applicants) and Allocations, released bi-annually. ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udfd8\ufe0f Real Estate & Urban",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "Urban Public Housing Wait Times, Wait List and Allocations June 2020",
+      "url": "https://data.nt.gov.au/dataset/urban-public-housing-wait-times-wait-list-and-allocations-june-2020",
+      "publisher": "Housing, Local Government and Community Development ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/83408706-b644-452a-bced-ba1153d02853/resource/a71c698a-ff28-402b-b80d-d7138c57ea81/download/open-data-urban-public-housing-wait-times-wait-list-and-allocations-30-june-2020.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Summary information for Urban Public Housing Wait Times, Wait List (Applicants) and Allocations, released bi-annually. ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udfd8\ufe0f Real Estate & Urban",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "Urban Public Housing Wait Times, Wait List and Allocations December 2019",
+      "url": "https://data.nt.gov.au/dataset/urban-public-housing-wait-times-wait-list-and-allocations-december-2019",
+      "publisher": "Housing, Local Government and Community Development ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/80b002c7-6271-4682-a4d5-0f47de30f569/resource/adb52ea3-269a-4cf5-b1f2-c5f8f1109fc0/download/open-data-urban-public-housing-wait-times-wait-list-and-allocations-31-december-2019.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Summary information for Urban Public Housing Wait Times, Wait List (Applicants) and Allocations, released bi-annually.  ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udfd8\ufe0f Real Estate & Urban",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "Urban Public Housing Wait Times, Wait List and Allocations June 2019",
+      "url": "https://data.nt.gov.au/dataset/urban-public-housing-wait-times-wait-list-and-allocations",
+      "publisher": "Housing, Local Government and Community Development ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/ad6fa6b4-061b-4a90-bf59-ce4b6b1749f2/resource/3752c9f9-284b-4604-adf8-b5808efd28be/download/open-data-urban-public-housing-wait-times-wait-list-and-allocations-30-june-2019.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Summary information for Urban Public Housing Wait Times, Wait List (Applicants) and Allocations, released bi-annually.    ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udfd8\ufe0f Real Estate & Urban",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Urban Public Housing Wait Times, Wait List and Allocations 2018",
+      "url": "https://data.nt.gov.au/dataset/urban-public-housing-wait-times-wait-list-and-allocations-2018",
+      "publisher": "Housing, Local Government and Community Development ",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/2235cfa5-d458-4d67-9553-372e58f478fe/resource/a2e3a785-a76d-4bc1-8156-ef6d6b88c5c3/download/open-data-urban-public-housing-wait-times-wait-list-and-allocations-31-december-2018.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Summary information for Urban Public Housing Wait Times, Wait List (Applicants) and Allocations, released bi-annually.",
+      "geographic_coverage": "Australia",
+      "category": "\ud83c\udfd8\ufe0f Real Estate & Urban",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Calendar Year Visitor Estimates for Parks & Wildlife NT",
+      "url": "https://data.nt.gov.au/dataset/calendar-year-visitor-estimates-for-parks-wildlife-nt",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/170cd7eb-9e96-4cfa-b862-b12273383d56/resource/043f4395-1291-4216-87e7-8a2178370ed3/download/open-data-_2019-nt_parks_reserves-calendar-year-visitor-data-pw-6-may-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Five calendar year comparison of Parks and Reserves visitation from 2015-2019. ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83e\udd81 Biodiversity",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Accommodation Provider List January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-accommodation-provider-list-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/1075724a-4745-4610-8fd9-3687751ba090/resource/c09a2153-bad4-4c8a-a9f5-6774d7d015e1/download/01-accommodation-providers_july-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism's list of accommodation providers",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Food and Drink Provider List January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-food-and-drink-provider-list-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/534d0f48-e2ed-4cfb-b3ff-177725b7f500/resource/064b1463-7d6a-4be8-bad0-219484d1fe85/download/02-food-and-drink_july-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism's list of food and drink providers",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi New-Return User January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-new-return-user-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/b7c8f2d3-ea8b-4ca1-869b-bb91bf595576/resource/8280640e-e76a-4270-9431-f148059eaaa3/download/nt-tourismfree-wifi-new-return-visitor-2020-a.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "A weekly total of return and new count of all NT Tourism Free WiFi users.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Sessions by Hotspot January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-sessions-by-hotspot-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/15ad05e5-8973-4c68-bdcd-ccf286beb491/resource/51084bf9-c6ba-49b2-b6c9-43e43bd77481/download/nt-tourism-free-wifisessions-by-hotspot-2020-a.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Total user sessions for each NT Tourism Free WiFi Hotspot for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi User Count by Hotspot January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-user-count-by-hotspot-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/dd17cb4b-bb08-4a84-868d-7c5bd87d778a/resource/470e95d8-a5db-48f2-9d92-00bc26b48e69/download/nt-tourism-wifi-user-count-by-hotspot-2020-a.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "User Count by NT Tourism Free WiFi Hotspot for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Weekly Usage Count  January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-weekly-usage-count-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/89b054ee-febe-43fe-9f7c-2fdf1aee1121/resource/db225798-3ec9-4808-9a9d-202cf98d57bf/download/nt-tourism-free-wifi-weekly-usage-count-2020-a.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Device count total NT Tourism Free WiFi for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism General Services Provider List January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-general-services-provider-list-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/da130655-3b93-40ac-b4f4-572ddd7abfc3/resource/b0c86167-d01d-4054-acb8-caf4037e4c5e/download/04-general-services_july-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism list general service providers",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Tours Provider List January - June 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-tours-provider-list-january-june-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/643d5cdc-306e-406d-9466-7015ac29ede7/resource/fbc57ea4-2d7f-4dc9-87ad-d6f9cddacefd/download/03-tours-providers_july-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism list of tour providers.\r\n\r\n",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Accommodation Provider List January - December 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-accommodation-provider-list-january-december-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/3518ec46-5415-4f13-a1fd-afb08902b4e9/resource/7417cef2-3d7b-4436-8a3a-45c16b2cf282/download/01-accommodation-providers-dec-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism's list of accommodation providers",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Tours Provider List July - December 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-tours-provider-list-july-december-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/8d6d15e8-ff5a-48a5-b6df-a6c7d661ed82/resource/5324d8e9-cd47-4274-a08b-0b8f69561d04/download/03-tours-providers-dec-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism list of tour providers.  ",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism General Services Provider List July - December 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-general-services-provider-list-july-december-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/c051d6c8-1d4d-49de-b5dc-59284f8c3c2c/resource/3bf7f34c-aef1-4e11-a8c3-7097315589db/download/04-general-services-dec-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism list general service providers",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi User Count by Hotspot July - December 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-user-count-by-hotspot-july-december-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/71a0cbe9-7ef0-4a0d-81d3-3a482acf2096/resource/a4b548d5-3e74-4866-a3fe-97fe4c9854ac/download/nt-tourism-free-wifi-sessions-by-hotspot-dec-2020.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "User Count by NT Tourism Free WiFi Hotspot for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Sessions by Hotspot July - December 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-sessions-by-hotspot-july-december-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/c71c2202-3d95-47df-8896-1b95e8e02d1e/resource/7a91e0dd-24c2-4c37-8c82-06e28c4e57ac/download/nt-tourism-free-wifi-sessions-by-hotspot-dec-2020.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Total user sessions for each NT Tourism Free WiFi Hotspot for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi New-Return User July - December 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-new-return-user-july-december-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/b8053ee4-d7c7-4908-afb1-b273b4f5d659/resource/82455ee1-9bc9-4ebb-b55b-f7a2a0b4195d/download/01-accommodation-providers-dec-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "A weekly total of return and new count of all NT Tourism Free WiFi users.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Food and Drink Provider List July - December 2020",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-food-and-drink-provider-list-july-december-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/f9a99506-7459-41c9-b5a2-5ef943ba10f6/resource/75a8a156-fff2-46de-89c8-f6352135198d/download/01-accommodation-providers-dec-2020.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism's list of food and drink providers",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Weekly Usage Count January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-weekly-usage-count",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/27dcd3b4-b32c-4069-a5bf-cb1fd013e6a0/resource/2240aa78-ef60-41a9-90c0-440cf6d1ca3a/download/09-nt-tourism-free-wifi-weekly-usage-jan-jun-2019-.csv.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Device count total NT Tourism Free WiFi for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi User Count by Hotspot January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-user-count-by-hotspot",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/3bb6bf90-2c95-467e-9432-b5c8fac48e69/resource/95383a04-0709-4044-be06-223cfd84b9f2/download/08-nt-tourism-free-wifi-user-count-by-hotspot-jan-jun-2019.csv.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "User Count by NT Tourism Free WiFi Hotspot for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Sessions by Hotspot January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-sessions-by-hotspot",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/0d9d86f8-6f49-44d3-899f-c966ad5fc1f9/resource/08b90692-5e94-4158-8f55-92bc0b111f38/download/06-nt-tourism-free-wifi-sessions-by-hotspot-jan-jun-2019.csv.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Total user sessions for each NT Tourism Free WiFi Hotspot for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Food and Drink Provider List January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-food-and-drink-provider-list",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/02d2a7d7-24a8-4347-9070-c76d719d03b7/resource/75773920-a716-4190-b5a8-523f6b2893c8/download/02-food-and-drink.xlsx.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism's list of food and drink  providers    ",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism General Services Provider List January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-general-services-provider-list",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/110e8beb-48a4-4343-a5ae-2a180e5b389b/resource/cd5cdfb0-0c16-4bb1-a4e7-b05c1b4d4089/download/04-general-services.xlsx.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism list general service providers   ",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Tours Provider List January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-tours-provider-list",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/82edb00f-e0cc-46e0-b334-17390cdcfead/resource/f4d8a5bc-4a76-45af-b077-c9532113dc56/download/03-tours-providers.xlsx.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism list of tour providers.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Accommodation Provider List January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-accommodation-provider-list",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/29a16409-98ce-4ac5-bc49-54994be06f62/resource/375e8e0c-37c4-4de2-a3d3-994ae4ac91ae/download/01-accommodation-providers.xlsx.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism's list of accommodation providers   ",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi New-Return User January - June 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-new-return-user",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/4e5c8128-66ff-4ed3-bf8e-79ccdf67f816/resource/28822dbb-add5-44f5-bbc0-e07f45162641/download/05-nt-tourism-free-wifi-new-return-user-jan-jun2019.csv.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "A weekly total of return and new count of all NT Tourism Free WiFi users. ",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism General Services Provider List July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-general-services-provider-list-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/fffc6a3b-ae88-486b-8210-490d25ce66fc/resource/307d79bc-2c15-4b07-89b6-109d5b135872/download/04-general-services-jul-dec-2019.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism list general service providers",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Food and Drink Provider List July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-food-and-drink-provider-list-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/4682903a-c47e-4b12-b2f6-6e740e7b5603/resource/00a05905-b1bb-48c2-8837-27860d9a5931/download/02-food-and-drink-jul-dec-2019.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism's list of food and drink providers",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Sessions by Hotspot July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-sessions-by-hotspot-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/b7ec5396-2a35-4881-beda-c3ff936fd42e/resource/c8355f02-3e54-4e73-8092-4e9c88b53b86/download/08-nt-tourism-free-wifi-user-session-by-hotspot-july-december-2019.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Total user sessions for each NT Tourism Free WiFi Hotspot for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi User Count by Hotspot July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-user-count-by-hotspot-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/4ca55366-0901-41fe-acd6-78dbaf77c198/resource/0421c560-126b-4dbd-98b2-b4e9fa74d048/download/06-nt-tourism-free-wifi-user-count-by-hotspot-july-december-2019.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "User Count by NT Tourism Free WiFi Hotspot for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Tours Provider List July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-tours-provider-list-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/cc818a96-bf64-4b2d-a0ca-6cdddc7a5002/resource/efa8bc58-8e64-4569-ab79-1f38e2a441ce/download/03-tours-providers-jul-dec-2019.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism list of tour providers.   ",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi New-Return User July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-new-return-user-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/fae8b73b-c591-49eb-a2a4-6d0896fec9a8/resource/8b881116-9cb6-40a8-b47d-64f1d2ba222a/download/05-nt-tourism-free-wifi-new-return-user-july-december-2019.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "A weekly total of return and new count of all NT Tourism Free WiFi users.   ",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Accommodation Provider List July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-accommodation-provider-list-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/14ce9c09-7c3b-4a58-a8eb-edc21ff2e67e/resource/a86baf30-e5ca-438f-aefb-33741d88f9be/download/01-accommodation-providers-jul-dec-2019.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Name, location and contact details of NT Tourism's list of accommodation providers  ",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "NT Tourism Free WiFi Weekly Usage Count July - December 2019",
+      "url": "https://data.nt.gov.au/dataset/nt-tourism-free-wifi-weekly-usage-count-july-december-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "CSV"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/033f6b1e-a945-4f32-9dd8-b56235c11554/resource/007597ce-4966-4a69-ab6c-93c9e3e65289/download/09-nt-tourism-free-wifi-weekly-usage-july-december-2019.csv",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Device count total NT Tourism Free WiFi for six months.",
+      "geographic_coverage": "Australia",
+      "category": "Arts, sport and leisure",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Wholesale Alcohol Supply, March Quarter 2024",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-march-quarter-2024",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/cdc8117b-7a64-4a32-ad9e-f0157534080e/resource/9499f4e2-9f58-4f35-9d42-e132ac206946/download/wholesale-supply-statistics-2024_03.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply, December Quarter 2023",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-december-quarter-2023",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/1d92d2b5-f1cb-4ae2-9ccb-62349110ec5f/resource/61690864-65ec-4fec-92e1-f120116c4291/download/wholesale-supply-statistics-2023_12.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply, September Quarter 2023",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-september-quarter-2023",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/e630e520-35ff-4be2-ba87-915e60af19e1/resource/01c2c0a1-6eb2-4ea8-8790-2ceadde3980e/download/wholesale-supply-statistics-2023_09.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply, June Quarter 2023",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-june-quarter-2023",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/9ee692dd-23aa-4cd7-8484-014f6a448c9b/resource/9aa24099-6ebb-43d5-a81f-c14921a594f9/download/wholesale-supply-statistics-2023_06.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Year, 2015-2022",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-by-year-2015-2022",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/a80c3093-bd7c-4d24-a826-19ea023e0f60/resource/03d2c79d-faa1-4150-8c23-0d2a89f2229a/download/wholesale-alcohol-supply-tables-2015-2022.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply, March Quarter 2023",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-march-quarter-2023",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/3bd21e4b-d4f1-455e-9b51-a4c0314fb5c5/resource/4ad87704-2394-4b80-be4e-8dc9dfcc9698/download/wholesale-alcohol-supply-march-quarter-2023.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Quarter, 2022",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-by-quarter-2022",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/55b9c1a0-67c0-4c13-8680-31e709b8b943/resource/8e0d6705-7573-4c82-aba6-87780dbc4172/download/wholesale-alcohol-supply-by-quarter-2022.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Quarter, 2021",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-by-quarter-2021",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/e166f536-70c7-4b93-a9e3-7a196396df5f/resource/feb45d23-95a6-4bc9-8cbd-f4a2d38d7b6b/download/wholesale-alcohol-supply-by-quarter-2021.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 2
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Year, 2014-2021",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-by-year-2014-2021",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/fa0a0d37-830c-425f-8214-ce8c5665997f/resource/b46f618e-3859-4413-a34b-05e69674ca11/download/wholesale-alcohol-supply-data-2014-2021.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the NT provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product type (cask wine, bo",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply  by Quarter 2020",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-2020",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/3f2debf5-300f-41cb-b155-fab1e4ca5281/resource/4db890e5-339b-4172-b87d-c70283e53bb2/download/2020_ws_pac_supply_aggregate_revised.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the Northern Territory provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product typ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply  by Quarter 2019",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-2019",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/7807bd6c-d113-4f1d-b368-b586da7a02f5/resource/9d26f981-3e7b-4c5b-acca-d41f95c305f2/download/2019_ws_pac_supply_aggregate_revised.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the Northern Territory provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product typ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply  by Quarter 2018",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-2018",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/04680709-5a0f-429a-99b6-250dcb8a8241/resource/fc91c4c2-119f-448a-bd65-a941eb3a347d/download/2018_ws_pac_supply_aggregate_revised.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the Northern Territory provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product typ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Wholesale Alcohol Supply by Quarter 2017",
+      "url": "https://data.nt.gov.au/dataset/wholesale-alcohol-supply-2017",
+      "publisher": "Tourism and Hospitality",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/12a18fd0-5614-4b32-9731-b4516b89b79b/resource/ffd567fb-cc69-4ea6-a23c-04550afc50a9/download/2017_ws_pac_supply_aggregate_revised.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Wholesalers registered to trade alcohol in the Northern Territory provide the Department of Industry, Tourism and Trade with data on the volume of alcohol supplied to licensed retailers by product typ",
+      "geographic_coverage": "Australia",
+      "category": "\ud83d\udccb Government & Admin",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 1
+    },
+    {
+      "title": "Recreational Fishing Survey of the Greater Darwin Area 2014",
+      "url": "https://data.nt.gov.au/dataset/recreational-fishing-survey-of-the-greater-darwin-area-2014",
+      "publisher": "Agriculture and Fisheries",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/0182f294-c6c6-48b1-aa75-3ee2108c81f4/resource/530ea26f-7da8-4648-9dd3-dc30bee9778c/download/2014-final-report-tables-and-appendices_data-portal.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Data supporting the report for recreational fishing effort and catch in the Greater Darwin Area 2014.",
+      "geographic_coverage": "Australia",
+      "category": "Boating, fishing and marine",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    },
+    {
+      "title": "Recreational Fishing Survey of the Greater Darwin Area 2015",
+      "url": "https://data.nt.gov.au/dataset/recreational-fishing-survey-of-the-greater-darwin-area-2015",
+      "publisher": "Agriculture and Fisheries",
+      "license": "Creative Commons Attribution",
+      "formats": [
+        "XLSX"
+      ],
+      "download_url": "https://data.nt.gov.au/dataset/a9670abb-f32c-4676-8612-97a8baf42ba5/resource/45263a03-a803-455c-bde4-b47380da6807/download/2015-final-report-tables-and-appendices_data-portal.xlsx",
+      "last_updated": "2024-09-23",
+      "update_frequency": "Not specified",
+      "description": "Data supporting the report for recreational fishing effort and catch in the Greater Darwin Area 2015.",
+      "geographic_coverage": "Australia",
+      "category": "Boating, fishing and marine",
+      "product_score": 1,
+      "product_reasons": [],
+      "num_resources": 3
+    }
+  ]
+}
