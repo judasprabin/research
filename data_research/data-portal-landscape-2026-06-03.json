@@ -1,0 +1,174 @@
+{
+  "generated": "2026-06-03",
+  "focus": "NSW & VIC Data Sources",
+  "total_sources": 17,
+  "ckan_results": {},
+  "specialized_portals": {
+    "ABS": {
+      "description": "Australian Bureau of Statistics - Census, economic indicators",
+      "key_datasets": [
+        "Census data",
+        "Labor force",
+        "CPI",
+        "GDP",
+        "Business stats"
+      ],
+      "api_status": "REST API available",
+      "nsw_vic_focus": "State-level breakdowns available for most datasets",
+      "product_utility": "\u2b50\u2b50\u2b50\u2b50\u2b50 - High-quality, regularly updated official statistics"
+    },
+    "BOM": {
+      "description": "Bureau of Meteorology - Weather, climate data",
+      "key_datasets": [
+        "Real-time weather",
+        "Climate observations",
+        "Radar/satellite",
+        "Warnings"
+      ],
+      "api_status": "Public data available",
+      "nsw_vic_focus": "Complete coverage - NSW/VIC weather stations + forecasts",
+      "product_utility": "\u2b50\u2b50\u2b50\u2b50\u2b50 - Real-time, API-accessible, live updates"
+    },
+    "CSIRO": {
+      "description": "Scientific data from Australia's research agency",
+      "key_datasets": [
+        "Climate models",
+        "Environmental monitoring",
+        "Agricultural",
+        "Marine"
+      ],
+      "api_status": "varies by dataset",
+      "nsw_vic_focus": "Regional climate data available",
+      "product_utility": "\u2b50\u2b50\u2b50\u2b50 - High-quality research, may require licensing"
+    },
+    "GeoscienceAU": {
+      "description": "Geological surveys, natural hazards, geospatial",
+      "key_datasets": [
+        "Seismic data",
+        "Geological maps",
+        "Hazard risk",
+        "Topography"
+      ],
+      "api_status": "Web services available",
+      "nsw_vic_focus": "Comprehensive nationwide coverage",
+      "product_utility": "\u2b50\u2b50\u2b50\u2b50 - Good for location-based services"
+    },
+    "AIHW": {
+      "description": "Health and welfare statistics",
+      "key_datasets": [
+        "Hospital data",
+        "Health services",
+        "Aged care",
+        "Disability"
+      ],
+      "api_status": "Data downloads available",
+      "nsw_vic_focus": "State-level health data available",
+      "product_utility": "\u2b50\u2b50\u2b50 - Good for healthcare products, may be aggregated"
+    },
+    "ALA": {
+      "description": "Atlas of Living Australia - Biodiversity observations",
+      "key_datasets": [
+        "Species occurrences",
+        "Biodiversity maps",
+        "Citizen science"
+      ],
+      "api_status": "REST API available",
+      "nsw_vic_focus": "Complete occurrence data for both states",
+      "product_utility": "\u2b50\u2b50\u2b50\u2b50 - Great for location-based nature/ecology products"
+    },
+    "AODN": {
+      "description": "Australian Ocean Data Network - Coastal/marine",
+      "key_datasets": [
+        "Sea temperature",
+        "Current data",
+        "Wave forecasts",
+        "Acoustic"
+      ],
+      "api_status": "Thematic Mapping Service available",
+      "nsw_vic_focus": "Coastal NSW/VIC data including Victoria coast",
+      "product_utility": "\u2b50\u2b50\u2b50\u2b50\u2b50 - Real-time marine data, perfect for apps"
+    },
+    "NationalMap": {
+      "description": "Interactive geospatial platform with government datasets",
+      "key_datasets": [
+        "Imagery",
+        "Administrative boundaries",
+        "Infrastructure",
+        "Dynamically loaded"
+      ],
+      "api_status": "Web-based/GIS API",
+      "nsw_vic_focus": "Complete geospatial coverage",
+      "product_utility": "\u2b50\u2b50\u2b50\u2b50 - Visual data discovery, good for map products"
+    },
+    "RDA": {
+      "description": "Research Data Australia - National research data aggregator",
+      "key_datasets": [
+        "Research outputs",
+        "Research data",
+        "Institutional repositories"
+      ],
+      "api_status": "OAI-PMH, REST API",
+      "nsw_vic_focus": "Contains NSW/VIC research from universities",
+      "product_utility": "\u2b50\u2b50\u2b50 - Useful for research collaboration, hit-or-miss"
+    }
+  },
+  "nsw_vic_critical": {
+    "CRITICAL": [
+      "NSW Open Data",
+      "DataVic",
+      "data.gov.au"
+    ],
+    "HIGH": [
+      "ABS",
+      "BOM",
+      "CSIRO",
+      "GeoscienceAU",
+      "AODN",
+      "ALA"
+    ],
+    "MEDIUM": [
+      "AIHW",
+      "NationalMap",
+      "TERN",
+      "RDA"
+    ]
+  },
+  "product_categories": {
+    "Real-time/API-driven": [
+      "BOM",
+      "AODN",
+      "ABS",
+      "ALA",
+      "data.gov.au"
+    ],
+    "Geospatial": [
+      "GeoscienceAU",
+      "NationalMap",
+      "AODN",
+      "CSIRO",
+      "ALA"
+    ],
+    "Health/Welfare": [
+      "AIHW",
+      "ABS"
+    ],
+    "Environmental": [
+      "CSIRO",
+      "AODN",
+      "ALA",
+      "BOM",
+      "TERN",
+      "GeoscienceAU"
+    ],
+    "Economic/Social": [
+      "ABS",
+      "data.gov.au"
+    ],
+    "Scientific": [
+      "CSIRO",
+      "RDA",
+      "ALA",
+      "TERN"
+    ]
+  }
+}

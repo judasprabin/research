@@ -1,0 +1,657 @@
+{
+  "generated": "2026-06-03",
+  "scope": "NSW & VIC Data Sources Landscape Analysis",
+  "focus_states": [
+    "NSW",
+    "Victoria"
+  ],
+  "total_sources_analyzed": 14,
+  "sources_by_priority": {
+    "CRITICAL": [
+      "NSW Open Data Portal",
+      "DataVic (Victoria Open Data Portal)",
+      "ABS (Australian Bureau of Statistics)",
+      "BOM (Bureau of Meteorology)"
+    ],
+    "HIGH": [
+      "data.gov.au (National Portal)",
+      "Geoscience Australia",
+      "CSIRO Data Access Portal",
+      "Atlas of Living Australia (ALA)"
+    ],
+    "MEDIUM": [
+      "AIHW (Australian Institute of Health & Welfare)",
+      "Research Data Australia (RDA)",
+      "NationalMap",
+      "Australian Data Archive (Dataverse)",
+      "TERN (Terrestrial Ecosystem Research Network)"
+    ]
+  },
+  "data_sources": {
+    "NSW Open Data Portal": {
+      "url": "https://data.nsw.gov.au",
+      "portal_type": "Government CKAN Portal",
+      "datasets_count": 16907,
+      "updated": "2026-06-03",
+      "status": "\u2705 ACTIVE",
+      "priority": "CRITICAL",
+      "api_available": true,
+      "api_endpoint": "https://data.nsw.gov.au/api/3",
+      "data_types": [
+        "Education (schools, universities)",
+        "Transport (vehicles, roads, traffic)",
+        "Health (hospitals, services)",
+        "Crime statistics",
+        "Housing & planning",
+        "Environment & water",
+        "Tourism",
+        "Business & economy",
+        "Finance & procurement",
+        "Spatial/Geospatial"
+      ],
+      "key_datasets": [
+        "NSW government school locations",
+        "Crime statistics (monthly updates)",
+        "Fuel check prices",
+        "Popular baby names",
+        "Performance and wellbeing framework"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "XLSX",
+        "SHP",
+        "GeoJSON",
+        "TIFF"
+      ],
+      "accessibility": "Open license (mostly CC-BY 4.0)",
+      "specialised_portals": [
+        "API.NSW - enterprise APIs",
+        "Environmental Data Portal (SEED)",
+        "HealthStats NSW",
+        "Transport Open Data Hub",
+        "NSW Bureau of Crime Statistics",
+        "Spatial Collaboration Portal",
+        "NSW Flood Data Portal",
+        "NSW Planning Portal",
+        "Bureau of Health Information"
+      ],
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Real-time service location discovery (schools, hospitals)",
+        "Traffic & transport analytics",
+        "Safety & crime risk mapping",
+        "Education analytics dashboards",
+        "Tourism & hospitality apps",
+        "Property & urban planning"
+      ]
+    },
+    "DataVic (Victoria Open Data Portal)": {
+      "url": "https://data.vic.gov.au",
+      "portal_type": "Government CKAN Portal",
+      "datasets_count": "15000+",
+      "updated": "2026-06-03",
+      "status": "\u2705 ACTIVE",
+      "priority": "CRITICAL",
+      "api_available": true,
+      "api_endpoint": "https://data.vic.gov.au/api/3",
+      "data_types": [
+        "Transport & traffic",
+        "Health & aged care",
+        "Education",
+        "Crime & justice",
+        "Environment",
+        "Finance & procurement",
+        "Planning & development",
+        "Local government"
+      ],
+      "key_datasets": [
+        "Victoria traffic data",
+        "Aged care facilities",
+        "School locations",
+        "Crime incident data",
+        "Health service locations",
+        "Planning applications"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "XLSX",
+        "SHP",
+        "KML"
+      ],
+      "accessibility": "Open license",
+      "specialised_portals": [
+        "VicRoads - transport data",
+        "DHHS - health & human services",
+        "Education State",
+        "Spatial Victoria"
+      ],
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Health facility discovery",
+        "Aged care analytics",
+        "Traffic routing & congestion analysis",
+        "Education resource planning",
+        "Justice & policing dashboards"
+      ]
+    },
+    "data.gov.au (National Portal)": {
+      "url": "https://data.gov.au",
+      "portal_type": "Federal Open Data Portal",
+      "datasets_count": "20000+",
+      "updated": "2026-06-03",
+      "status": "\u2705 ACTIVE",
+      "priority": "HIGH",
+      "api_available": true,
+      "api_endpoint": "https://data.gov.au/api/3",
+      "data_types": [
+        "Health (AIHW data)",
+        "Statistics (ABS data)",
+        "Environment",
+        "Transportation",
+        "Tourism",
+        "Climate & weather",
+        "Public administration",
+        "Infrastructure"
+      ],
+      "key_datasets": [
+        "ABS Census data",
+        "Hospital performance",
+        "Environmental compliance",
+        "ASIC company register",
+        "Disaster risk registers"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "XLSX",
+        "PDF",
+        "SHP"
+      ],
+      "accessibility": "Open license (mostly CC-BY 4.0)",
+      "specialised_portals": [
+        "ASIC - company data",
+        "ABN Lookup",
+        "AusTender - procurement",
+        "DisasterAlert"
+      ],
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "National statistics aggregation",
+        "Healthcare analytics",
+        "Business intelligence",
+        "Risk & disaster management",
+        "Compliance reporting"
+      ]
+    },
+    "ABS (Australian Bureau of Statistics)": {
+      "url": "https://www.abs.gov.au",
+      "portal_type": "Statistical Agency (Official Statistics)",
+      "datasets_count": "10000+ (Census, surveys, indices)",
+      "updated": "Regularly (weekly/monthly/quarterly)",
+      "status": "\u2705 ACTIVE",
+      "priority": "CRITICAL",
+      "api_available": true,
+      "api_endpoint": "https://api.data.abs.gov.au",
+      "data_types": [
+        "Census data (household, demographic)",
+        "Labor force statistics",
+        "CPI (inflation)",
+        "GDP & national accounts",
+        "International trade",
+        "Business statistics",
+        "Crime statistics",
+        "Health & disability"
+      ],
+      "key_datasets": [
+        "2021 Census (household + person records)",
+        "Current labor force (monthly)",
+        "CPI-All groups (quarterly)",
+        "State & regional breakdowns available",
+        "Business registers"
+      ],
+      "formats": [
+        "CSV",
+        "XLS",
+        "API (REST)",
+        "Microdata (specialized download)"
+      ],
+      "accessibility": "Free for all; microdata requires special access",
+      "nsw_vic_breakdown": "State-level data available for all major datasets",
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Demographics & population products",
+        "Labor market insights",
+        "Economic forecasting",
+        "Consumer behavior analytics",
+        "Regional profiling tools"
+      ]
+    },
+    "BOM (Bureau of Meteorology)": {
+      "url": "http://www.bom.gov.au/climate/data/",
+      "portal_type": "Weather & Climate Agency",
+      "datasets_count": "Real-time + 100+ years historical",
+      "updated": "Real-time (15-30 min updates)",
+      "status": "\u2705 ACTIVE",
+      "priority": "CRITICAL",
+      "api_available": true,
+      "api_endpoint": "http://www.bom.gov.au/web-services (various endpoints)",
+      "data_types": [
+        "Real-time weather observations",
+        "Weather forecasts (1-7 days)",
+        "Historical climate data",
+        "Satellite imagery",
+        "Radar data",
+        "Severe weather warnings",
+        "Ocean data",
+        "Astronomical data"
+      ],
+      "key_datasets": [
+        "Current weather stations (NSW/VIC: 100+ stations)",
+        "7-day forecasts",
+        "Climate statistics 1970-present",
+        "Rainfall records",
+        "Temperature extremes"
+      ],
+      "formats": [
+        "JSON",
+        "XML",
+        "CSV",
+        "NetCDF (scientific)",
+        "GeoTIFF"
+      ],
+      "accessibility": "Free public access",
+      "nsw_vic_breakdown": "Granular station-level data for both states",
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Real-time weather apps",
+        "Climate risk assessment",
+        "Agricultural planning",
+        "Construction scheduling",
+        "Event planning dashboards"
+      ]
+    },
+    "AODN (Australian Ocean Data Network)": {
+      "url": "https://www.aodn.org.au",
+      "portal_type": "Marine Data Network",
+      "datasets_count": "500+ marine datasets",
+      "updated": "Real-time (wave, temperature)",
+      "status": "\u2705 ACTIVE",
+      "priority": "CRITICAL (for coastal products)",
+      "api_available": true,
+      "api_endpoint": "https://portal.aodn.org.au/search (REST)",
+      "data_types": [
+        "Sea surface temperature (real-time)",
+        "Wave height & direction",
+        "Ocean currents",
+        "Coastal tide data",
+        "Acoustic observations",
+        "Seismic data",
+        "Plankton & chlorophyll"
+      ],
+      "key_datasets": [
+        "SOOP (Ships of Opportunity) - temperature profiles",
+        "Coastal Data System - NSW coast wave/tide",
+        "Argo floats - temperature/salinity",
+        "Gliders - coastal observations",
+        "Reef monitoring data"
+      ],
+      "formats": [
+        "NetCDF",
+        "CSV",
+        "JSON",
+        "GeoTIFF"
+      ],
+      "accessibility": "Free public access",
+      "nsw_vic_breakdown": "Complete NSW & Victorian coast coverage",
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Coastal navigation & safety",
+        "Marine forecasting",
+        "Fishing & aquaculture planning",
+        "Coastal erosion monitoring",
+        "Tourism (beach conditions, water temp)"
+      ]
+    },
+    "Geoscience Australia": {
+      "url": "https://portal.ga.gov.au",
+      "portal_type": "Geological & Geospatial Research",
+      "datasets_count": "200+ datasets + web services",
+      "updated": "Regular (varies by dataset)",
+      "status": "\u2705 ACTIVE",
+      "priority": "HIGH",
+      "api_available": true,
+      "api_endpoint": "REST/WMS/WFS web services",
+      "data_types": [
+        "Geological maps & surveys",
+        "Seismic hazard data",
+        "Topography/Digital Elevation",
+        "Satellite imagery",
+        "Mineral resources",
+        "Hazard risk mapping",
+        "Infrastructure data"
+      ],
+      "key_datasets": [
+        "Seismic hazard maps",
+        "Australian geology dataset",
+        "Slope & aspect maps",
+        "Bushfire risk areas",
+        "Flood risk maps"
+      ],
+      "formats": [
+        "GeoTIFF",
+        "SHP",
+        "GeoJSON",
+        "WMS/WFS",
+        "NetCDF"
+      ],
+      "accessibility": "Free public access",
+      "nsw_vic_breakdown": "Complete nationwide coverage",
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Risk mapping & disaster warning",
+        "Property valuation tools",
+        "Site selection for development",
+        "Environmental impact assessment",
+        "Insurance risk profiling"
+      ]
+    },
+    "CSIRO Data Access Portal": {
+      "url": "https://data.csiro.au",
+      "portal_type": "Research Institution Data",
+      "datasets_count": "1000+ datasets",
+      "updated": "Ongoing (research output dependent)",
+      "status": "\u2705 ACTIVE",
+      "priority": "HIGH",
+      "api_available": false,
+      "api_endpoint": "Direct download (DataCite)",
+      "data_types": [
+        "Climate models",
+        "Agricultural/crop science",
+        "Environmental monitoring",
+        "Marine research",
+        "Food & nutrition",
+        "Materials science"
+      ],
+      "key_datasets": [
+        "Climate projections (1970-2100)",
+        "Regional climate models",
+        "Pasture quality data",
+        "Soil property maps"
+      ],
+      "formats": [
+        "NetCDF",
+        "CSV",
+        "HDF5",
+        "GeoTIFF"
+      ],
+      "accessibility": "Mostly open; some require metadata agreement",
+      "nsw_vic_breakdown": "Regional data often available",
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Climate impact modeling",
+        "Agricultural yield prediction",
+        "Environmental risk assessment",
+        "Long-term planning",
+        "Research collaboration"
+      ]
+    },
+    "Atlas of Living Australia (ALA)": {
+      "url": "https://ala.org.au",
+      "portal_type": "Biodiversity Data Network",
+      "datasets_count": "40+ million species records",
+      "updated": "Continuously (citizen science)",
+      "status": "\u2705 ACTIVE",
+      "priority": "HIGH",
+      "api_available": true,
+      "api_endpoint": "https://biocache.ala.org.au/ws",
+      "data_types": [
+        "Species occurrences (point data)",
+        "Species profiles",
+        "Biodiversity maps",
+        "Citizen science observations",
+        "Museum collections",
+        "Herbarium records"
+      ],
+      "key_datasets": [
+        "NSW flora & fauna distribution maps",
+        "Victoria endemic species",
+        "Threatened species locations",
+        "Seasonal migration patterns"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "KML",
+        "Maps (web)"
+      ],
+      "accessibility": "Free public access; CC-BY",
+      "nsw_vic_breakdown": "Complete species occurrence data",
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Ecological impact assessment",
+        "Conservation planning",
+        "Ecotourism & nature guides",
+        "Environmental education",
+        "Urban biodiversity monitoring"
+      ]
+    },
+    "AIHW (Australian Institute of Health & Welfare)": {
+      "url": "https://www.aihw.gov.au/data",
+      "portal_type": "Health & Welfare Statistics",
+      "datasets_count": "500+ indicators",
+      "updated": "Quarterly/annually",
+      "status": "\u2705 ACTIVE",
+      "priority": "MEDIUM",
+      "api_available": false,
+      "api_endpoint": "Direct download + reports",
+      "data_types": [
+        "Hospital performance",
+        "Health services utilization",
+        "Aged care facilities",
+        "Disability services",
+        "Mental health",
+        "Healthcare spending",
+        "Workforce"
+      ],
+      "key_datasets": [
+        "Hospital bed days by state/region",
+        "Aged care facility details",
+        "NDIS participant data",
+        "Mental health service contacts",
+        "Healthcare expenditure"
+      ],
+      "formats": [
+        "CSV",
+        "XLSX",
+        "PDF reports"
+      ],
+      "accessibility": "Free public access",
+      "nsw_vic_breakdown": "State-level aggregated data",
+      "product_potential": "\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Healthcare facility discovery",
+        "Aged care comparison tools",
+        "Health system analytics",
+        "Insurance risk modeling",
+        "Community needs assessment"
+      ]
+    },
+    "Research Data Australia (RDA)": {
+      "url": "https://researchdata.edu.au",
+      "portal_type": "Research Data Aggregator",
+      "datasets_count": "50,000+ research datasets",
+      "updated": "Continuous (institution dependent)",
+      "status": "\u2705 ACTIVE",
+      "priority": "MEDIUM",
+      "api_available": true,
+      "api_endpoint": "OAI-PMH + REST",
+      "data_types": [
+        "University research data",
+        "Clinical trials",
+        "Environmental studies",
+        "Social research",
+        "Scientific datasets"
+      ],
+      "key_datasets": [
+        "NSW university research outputs",
+        "VIC research data",
+        "Long-term environmental studies",
+        "Population health studies"
+      ],
+      "formats": [
+        "Various (institution dependent)"
+      ],
+      "accessibility": "Varies by dataset (CC licensing common)",
+      "nsw_vic_breakdown": "Data from NSW/VIC institutions",
+      "product_potential": "\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Research collaboration",
+        "Literature evidence base",
+        "Academic partnerships",
+        "Long-term trend analysis"
+      ]
+    },
+    "NationalMap": {
+      "url": "https://nationalmap.gov.au",
+      "portal_type": "Geospatial Discovery Platform",
+      "datasets_count": "100+ map layers",
+      "updated": "Real-time (dynamic layers)",
+      "status": "\u2705 ACTIVE",
+      "priority": "MEDIUM",
+      "api_available": true,
+      "api_endpoint": "WMS/WFS + Cesium API",
+      "data_types": [
+        "Imagery (satellite, aerial)",
+        "Administrative boundaries",
+        "Infrastructure (transport, utilities)",
+        "Environmental layers",
+        "Hazard risk zones",
+        "Government datasets"
+      ],
+      "key_datasets": [
+        "High-resolution satellite imagery",
+        "LGA boundaries",
+        "National parks boundaries",
+        "Seismic hazard overlays",
+        "Flood risk maps"
+      ],
+      "formats": [
+        "GeoTIFF",
+        "GeoJSON",
+        "WMS",
+        "WFS"
+      ],
+      "accessibility": "Free public access",
+      "nsw_vic_breakdown": "Complete visual coverage",
+      "product_potential": "\u2b50\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Visual data discovery",
+        "Property location services",
+        "Emergency response mapping",
+        "Land use planning",
+        "Environmental monitoring apps"
+      ]
+    },
+    "Australian Data Archive (Dataverse)": {
+      "url": "https://dataverse.ada.edu.au",
+      "portal_type": "Data Repository",
+      "datasets_count": "1000+ archived datasets",
+      "updated": "Ongoing",
+      "status": "\u2705 ACTIVE",
+      "priority": "MEDIUM",
+      "api_available": true,
+      "api_endpoint": "Dataverse API",
+      "data_types": [
+        "Social science data",
+        "Survey data",
+        "Census microdata",
+        "Longitudinal studies"
+      ],
+      "key_datasets": [
+        "Longitudinal study data",
+        "Survey responses",
+        "Historical census",
+        "Social research"
+      ],
+      "formats": [
+        "CSV",
+        "STATA",
+        "SPSS",
+        "RData"
+      ],
+      "accessibility": "Open CC-BY",
+      "nsw_vic_breakdown": "Institutional collections",
+      "product_potential": "\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Academic research",
+        "Social insights",
+        "Historical analysis",
+        "Longitudinal trend studies"
+      ]
+    },
+    "TERN (Terrestrial Ecosystem Research Network)": {
+      "url": "https://www.tern.org.au",
+      "portal_type": "Environmental Monitoring Network",
+      "datasets_count": "100+ long-term monitoring sites",
+      "updated": "Continuous monitoring",
+      "status": "\u2705 ACTIVE",
+      "priority": "MEDIUM",
+      "api_available": false,
+      "api_endpoint": "Data portal + download",
+      "data_types": [
+        "Ecosystem monitoring",
+        "Vegetation surveys",
+        "Soil data",
+        "Climate station networks",
+        "Phenology observations"
+      ],
+      "key_datasets": [
+        "SuperSites - intensive ecosystem monitoring",
+        "Ground cover data",
+        "Soil surveys",
+        "Plant populations"
+      ],
+      "formats": [
+        "CSV",
+        "NetCDF"
+      ],
+      "accessibility": "Free public access",
+      "nsw_vic_breakdown": "Multiple monitoring sites in both states",
+      "product_potential": "\u2b50\u2b50\u2b50",
+      "useful_for": [
+        "Climate impact assessment",
+        "Conservation planning",
+        "Agricultural monitoring",
+        "Environmental research"
+      ]
+    }
+  },
+  "summary": {
+    "total_datasets_available": "100,000+",
+    "data_types_covered": [
+      "Real-time (weather, ocean, traffic)",
+      "Statistical (demographics, economics, health)",
+      "Geospatial (maps, satellite, boundaries)",
+      "Environmental (climate, biodiversity, hazards)",
+      "Infrastructure (transport, utilities, planning)",
+      "Social (crime, education, welfare)",
+      "Scientific (research, marine, geological)"
+    ],
+    "key_characteristics": {
+      "data_freshness": "Mixed: Real-time (weather, transport) to annual (census)",
+      "formats": "CSV, JSON, Excel, GeoJSON, NetCDF, API access",
+      "licensing": "Mostly open (CC-BY 4.0, CC0, OGL)",
+      "geographic_coverage": "NSW & VIC comprehensive for government + national layers"
+    },
+    "product_opportunities": [
+      "Real-time weather + ocean data \u2192 Weather/marine apps",
+      "Health + transport + education data \u2192 Service discovery apps",
+      "Crime + geospatial \u2192 Safety/risk mapping",
+      "Demographics + economics \u2192 Insights/analytics platforms",
+      "Biodiversity + environmental \u2192 Conservation/tourism apps",
+      "Climate + agricultural \u2192 Farming decision support"
+    ]
+  }
+}
