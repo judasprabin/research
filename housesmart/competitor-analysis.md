@@ -74,3 +74,23 @@ No single competitor occupies all three zones.
 ## 5. Positioning Statement
 
 > "HouseSmart is the only app that turns your grocery receipts into real savings and nutrition insights — without any manual logging. For Australian households who want to spend smarter and eat better, effortlessly."
+
+---
+
+## 6. Monitoring Cadence & Response Triggers
+
+A competitor matrix is only useful if it's kept current. Re-run this analysis:
+
+- **Quarterly**, as a standing task (add to `roadmap.md` phase planning each quarter).
+- **Immediately** if any of these trigger events occur:
+
+| Trigger | Required response |
+|---|---|
+| Woolworths or Coles ships any cross-store or AI-driven grocery list feature | Re-assess the "structurally impossible" claim in §3/`market-research-au.md` §8 — if they ship it, the moat argument needs revision, not just a note |
+| MyFitnessPal or another nutrition app adds receipt-based tracking | Accelerate Nutrition Lens differentiation (e.g. bring forward deficiency alerts from `roadmap.md` 2.5) rather than treating it as low-probability indefinitely |
+| A new AU competitor launches receipt+list+price in beta | Audit their feature set against this matrix within a week; this is the most likely real threat ("New AU startup" row) and the one most within the team's control to respond to via speed |
+| Basiq pricing or CDR rules change materially | Re-check `financial-model.md` §6 sensitivity and `roadmap.md` Money Map dependency simultaneously, since both inherit this risk |
+
+This file should never be more than one quarter stale once the product is live —
+stale competitive analysis is worse than none, because it creates false confidence
+in the moat.

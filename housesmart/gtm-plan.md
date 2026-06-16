@@ -96,3 +96,31 @@
 | NPS | 20 | 35 | 45 |
 | CAC (organic) | AU$3 | AU$5 | AU$8 |
 | LTV (premium) | AU$40 | AU$50 | AU$60 |
+
+---
+
+## 7. Compliance & Kill Criteria for Marketing Claims
+
+- Any "AU$X saved" claim in marketing (ads, App Store copy, PR pitches like the
+  Business Insider "AU$800/year" angle in §4) must be substantiated by real
+  aggregate user data per the ACL requirement in `PRD.md` §10 — do not publish a
+  projected/illustrative savings number as if it were measured, even pre-launch.
+  Track this explicitly: don't finalise the Business Insider/SmartCompany pitch
+  numbers until beta data exists to back them.
+- Referral program (§5) terms must state credit value, expiry, and "not redeemable
+  for cash" clearly in-app before launch — required for both app store policy and
+  ACL.
+- Each waitlist/beta promotional offer (e.g. "3 months free premium") needs an
+  explicit expiry and eligibility rule decided before the landing page ships, to
+  avoid an open-ended liability against the financial model in `financial-model.md`.
+
+## 8. Channel Kill Criteria
+
+Don't keep funding a channel past its validation point — define the bar before spending:
+
+| Channel | Kill/scale signal |
+|---|---|
+| Reddit organic (§3) | If 2 posts generate <20 combined signups, stop and reallocate to influencer DMs |
+| Product Hunt (§4) | This is a one-shot event — failure to crack Top 10 is not a reason to delay growth phase, just lowers Day-1 signup expectations |
+| Paid Meta/Google/TikTok (§5) | Kill any channel where realised CAC exceeds 1.5× the target CAC in the table above for 2 consecutive weeks, rather than letting it run on hope |
+| Referral program (§5) | If referral share of installs is <5% by Month 6 (vs 15% target by Month 9), revisit the incentive size before Month 9, don't wait for the deadline to pass |

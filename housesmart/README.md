@@ -59,7 +59,8 @@ Both ideas share the same core engine (receipt OCR + bank sync + price compariso
 
 | File | Description |
 |------|-------------|
-| `PRD.md` | Full product requirements: features, MVP, roadmap, metrics, risks |
+| `TODO.md` | **Start here for engineering work.** Prioritised, phase-by-phase task backlog with acceptance criteria, dependencies, and estimates |
+| `PRD.md` | Full product requirements: features, MVP, roadmap, metrics, risks, acceptance criteria, NFRs, Definition of Done |
 | `market-research-au.md` | Australian grocery + fintech market analysis |
 | `competitor-analysis.md` | Cooklist, MyFitnessPal, Frollo, YNAB, Rocket Money and more |
 | `user-research.md` | 3 personas, JTBD, onboarding, retention |
@@ -67,7 +68,7 @@ Both ideas share the same core engine (receipt OCR + bank sync + price compariso
 | `design-concepts.md` | UX principles, screen flows, design system, visual direction |
 | `gtm-plan.md` | Launch strategy: beta → soft launch → full launch |
 | `financial-model.md` | Costs, revenue, unit economics, 12-month P&L |
-| `roadmap.md` | Quarter-by-quarter roadmap with priorities and milestones |
+| `roadmap.md` | Quarter-by-quarter roadmap with priorities, milestones, team/resourcing assumptions, cross-phase dependencies |
 
 ---
 

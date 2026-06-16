@@ -75,3 +75,31 @@
 | Price spike alert | Real-time | Urgency + savings ROI |
 | Monthly milestone ("AU$120 saved!") | Monthly | Long-term value reinforcement |
 | Streak counter ("6-week scan streak 🔥") | Ongoing | Gamification, habit formation |
+
+---
+
+## 6. Research Status & Validation Plan
+
+**Important caveat:** the three personas above are founder hypotheses based on
+market knowledge, not yet validated through structured interviews with real target
+users. Treat them as a starting model to test, not settled fact, when making
+product decisions that are expensive to reverse (e.g. core IA, pricing).
+
+### Before Phase 0 build starts (recommended, 1 week)
+- Run 8–10 short (20-min) interviews against the three persona hypotheses —
+  recruit via personal network + the channels listed in `gtm-plan.md` §3 (Reddit
+  r/ausfinance, budget-living Facebook groups) skewed toward people who already do
+  some form of grocery/expense tracking today.
+- Validate or revise: do the three JTBDs (§2) match what's actually said unprompted?
+  Is willingness-to-pay at AU$7.99 plausible, or does it need testing at multiple
+  price points before committing (`financial-model.md` ARPU assumption depends on this)?
+
+### During Phase 0–1 (the 20-user prototype + 500-user beta)
+- Treat every beta user's actual behaviour as the real validation data — the
+  "Key Validation Questions" table (§3) already defines the thresholds; the gap to
+  close is making sure those numbers are actually instrumented in PostHog
+  (`technical-architecture.md` §12) from day one of the beta, not added retroactively.
+- After the first 500-user beta cohort, re-write personas based on real usage
+  clusters (e.g. via a simple k-means on scan frequency / bank-connect rate /
+  category mix) rather than continuing to design against the three hypothesised
+  personas indefinitely.

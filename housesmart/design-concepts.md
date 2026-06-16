@@ -280,6 +280,49 @@ font-body:    Inter
 
 ---
 
+## 7A. Interaction States (required for every screen, not just the happy path)
+
+Every hi-fi mock delivered to engineering must include these states — a screen
+without them is not handoff-ready, regardless of how polished the happy-path mock looks:
+
+| State | Applies to | Spec |
+|---|---|---|
+| Loading | Scan processing, list generation, nutrition load | Skeleton screens (not spinners) matching the eventual content's layout, per "Intelligent Invisibility" principle — a spinner with no shape implies more wait than a skeleton does |
+| Empty | Grocery list (new user), Nutrition tab (no scans yet), Price Scout (single-store user only) | Each empty state explains *why* it's empty and the single action that unblocks it (e.g. "Scan 2+ receipts to unlock predictions") — never a bare "No data" |
+| Error (recoverable) | OCR failure, network failure, sync failure | Inline, specific message + retry action; never a generic "Something went wrong" with no path forward |
+| Error (unrecoverable → fallback) | Unreadable receipt, unsupported language | Route to manual entry, framed as a normal alternate path, not a failure screen |
+| Partial / low-confidence | Post-scan result with flagged fields | Flagged fields visually distinct (amber underline) and tappable inline — correcting one field must not require leaving the screen |
+| Offline | Any screen while device has no connectivity | Persistent but unobtrusive banner ("Offline — changes will sync"), never a blocking modal, since scanning specifically needs to work in-aisle with poor signal |
+| Permission denied | Camera, notifications, bank connect | Explain the value lost ("Without camera access, you'll need to enter receipts manually") before re-prompting, don't just bounce to OS settings silently |
+
+### Responsive Breakpoints
+
+Primary target is phone (iOS/Android), but the component library must not break on:
+
+| Breakpoint | Target | Notes |
+|---|---|---|
+| Small phone | iPhone SE / 360dp width | Minimum supported — verify no horizontal scroll, no truncated CTAs |
+| Standard phone | 390–430dp width | Primary design target |
+| Large phone / phablet | 430–480dp | Cards expand width, not just whitespace |
+| Tablet | ≥768dp (iPad) | Phase 3 deliverable (§7) — until then, tablet renders the phone layout centred with max-width, not stretched |
+
+### Design → Engineering Handoff Process
+
+1. Designer delivers Figma file with all states above (§7A) for the screen, plus
+   the relevant tokens from §6 — no engineer should need to eyeball pixel values
+   off a static mock.
+2. Designer and engineer walk the Figma "Dev Mode" spec together before
+   implementation starts — catches ambiguity (e.g. which empty-state copy applies
+   when) before code is written, not in review.
+3. Engineer implements; designer reviews the *running build* (simulator or
+   TestFlight), not the Figma file, before sign-off — per `PRD.md` §12 Definition
+   of Done item 7.
+4. Any deviation from the mock during implementation (e.g. a state that doesn't
+   fit on screen) is resolved by going back to the designer, not by an engineer's
+   ad-hoc judgment call on visual design.
+
+---
+
 ## 8. Accessibility
 
 - All interactive elements ≥ 44pt touch target

@@ -208,6 +208,33 @@ Public launch. Validate freemium conversion. Hit AU$2,400 MRR.
 
 ---
 
+## Team & Resourcing Assumptions
+
+This roadmap assumes a specific minimum team shape — if the team differs, dates
+must be re-derived, not assumed to hold:
+
+| Role | Phase 0–1 (MVP) | Phase 2+ |
+|---|---|---|
+| Product/founder | 1 (you) — also doing PM + QA + GTM | 1, increasingly GTM/partnerships focused |
+| Mobile engineer (React Native/Expo) | 1 (full-time or near-full-time) | 1–2 |
+| Backend engineer (Supabase/Edge Functions) | Can be the same person as mobile if full-stack | 1 dedicated once Money Map + billing land |
+| Designer | Part-time/contract through Phase 1 (`design-concepts.md` §7 Phase 1–2 deliverables) | Part-time ongoing |
+| QA | Founder + beta users through Phase 1 | Consider part-time/contract QA once paid users exist |
+
+If building solo (per `AGENT-PLAN.md` "Next Steps" question), expect Phase 0–1
+dates to roughly double — the dates above assume at least one dedicated engineer
+in addition to the founder.
+
+## Cross-Phase Dependencies (what blocks what)
+
+| This can't start... | ...until this is done |
+|---|---|
+| Phase 1 weekly list algorithm (1.4) | Phase 0 scan pipeline (items 2–4) producing real `purchase_history` rows to compute intervals from |
+| Phase 2 Price Scout (2.1) | Phase 1 has accumulated enough multi-store scan data per user — there is no minimum-data gate defined yet; **add one** before launch (suggest: require ≥2 stores × ≥2 receipts each before showing comparisons, consistent with `PRD.md` §2A Module 3 acceptance criteria) |
+| Phase 2 Money Map (2.2) | Basiq sandbox integration + legal review of CDR consent flow, which should start in Phase 1, not Phase 2, given typical third-party accreditation/integration lead times |
+| Phase 2 Freemium tiers (2.3) | Stripe AU compliance + subscription terms drafted (legal budget line in `financial-model.md` §5) |
+| Phase 3 crowdsourced pricing (3.1) | Privacy review of anonymisation approach — must be designed, not bolted on, given `competitor-analysis.md` "Threats" notes on privacy backlash |
+
 ## Key Decisions Log
 
 | Date | Decision | Rationale |

@@ -2,6 +2,14 @@
 
 _Prepared on May 5, 2026_
 
+> **ARCHIVED — superseded by `PRD.md`.** SmartCart was merged with BillScout
+> (the finance-agent concept) into the unified **HouseSmart** product on Jun 2026
+> (see `roadmap.md` → Key Decisions Log). Kept for historical reference and to trace
+> which original ideas survived the merge. **Do not implement against this document —
+> use `PRD.md`, `technical-architecture.md`, and `design-concepts.md` instead**, since
+> scope, pricing, stack choices (e.g. Basiq not Plaid for AU), and module names have
+> all changed since this was written.
+
 ---
 
 ## 🧠 Concept Overview

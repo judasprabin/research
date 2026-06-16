@@ -97,3 +97,24 @@
 | **Total** | **AU$42,500** | 100% |
 
 Within AU$50K bootstrap budget. ✅
+
+---
+
+## 6. Key Assumptions & Sensitivity
+
+Every projection above rests on assumptions that have **not yet been validated**
+with real users — treat the 12-month projection as a planning baseline to be
+revisited monthly against actuals, not a forecast to manage toward rigidly.
+
+| Assumption | Value used | Where it's validated |
+|---|---|---|
+| Free→paid conversion | 5% by Month 6 | `user-research.md` §3 Key Validation Questions — beta conversion rate |
+| Paid monthly churn | 18%, improving to <15% | Needs a real cohort to measure; revisit this model the first month real subscriber data exists |
+| Vision/Claude cost per scan | Implied ~AU$0.003 (Vision) + ~AU$0.0025 (Claude) per scan at 1K MAU scale | Validate against actual per-call pricing and average receipt length once the golden receipt set (`technical-architecture.md` §13) is in use — receipt length directly drives Claude token cost |
+| Basiq cost scaling (AU$0 → AU$250 → AU$500 across MAU tiers) | Per-connection pricing assumed | Confirm actual Basiq pricing tier breakpoints before Phase 2 — `PRD.md` §9 Risk Register already flags this as a risk; this model is the place that risk gets re-priced when real numbers arrive |
+| Setup cost (AU$3,050) | Excludes founder's own time | If design/branding is done in-house rather than contracted, reallocate that AU$2,500 to extended runway or paid acquisition testing |
+
+**Trigger for re-running this model:** any of (a) Month-3 actual conversion <3%
+(below even the conservative scenario), (b) Basiq quotes a per-MAU price >20%
+above the assumption above, or (c) average Claude tokens/receipt exceeds estimate
+by >50% (e.g. due to longer prompts after extraction-quality tuning).

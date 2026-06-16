@@ -63,6 +63,48 @@ Step 6: Downstream processing (async)
      - Bank transaction match attempt
 ```
 
+### 2.1 Error Handling & Retry Policy
+
+Every external call in the pipeline can fail independently. Treat the pipeline as a
+saga, not a single transaction — partial success must still produce a usable result.
+
+| Failure point | Detection | Behaviour |
+|---|---|---|
+| Image upload fails (no network) | Client-side upload error | Queue locally (expo-sqlite), retry with exponential backoff (1s, 2s, 4s, max 5 attempts), show "Saved — will upload when online" |
+| Google Vision OCR fails/times out | HTTP error or >8s response | Retry once; on second failure, fall back to manual entry screen with a pre-filled blank receipt form |
+| Google Vision returns low-quality text (garbled/empty) | Heuristic: <20 alphanumeric chars in response | Skip Claude call (saves cost), route straight to manual entry |
+| Claude extraction fails/times out | HTTP error or >10s response | Retry once with same prompt; on second failure, store raw OCR text only, mark receipt `status='needs_review'`, surface in a "fix these" queue in-app |
+| Claude returns invalid JSON | JSON.parse failure | Retry once with a corrective follow-up message ("Your last response was not valid JSON, return only the JSON object"); after 2 failures, fall back to `needs_review` |
+| Claude returns low per-field confidence (<0.8) | Confidence score in response | Accept the receipt, but flag specific fields for inline user correction (not a full re-scan) |
+| Open Food Facts lookup fails/no match | HTTP error or 404 | Mark item `food_id = null`, exclude from nutrition totals, lower that week's `coverage_pct`, do not block the rest of the pipeline |
+| Bank transaction match fails to find a candidate | No transaction within ±AU$2 / ±3 days | Leave `matched_receipt_id = null` — this is an expected, non-error outcome, not a failure |
+
+**Idempotency:** every `/scan` request carries a client-generated `idempotency_key`
+(UUID v4, generated once per image at capture time, stored in the offline queue with
+the image). The Edge Function upserts on `(user_id, idempotency_key)` so a retried
+upload after a flaky network never creates a duplicate receipt.
+
+**Cost control on `/scan`:** Vision + Claude calls cost money per call. Rate-limit to
+20 scans/user/day (well above any real usage) at the Edge Function layer to contain
+abuse, and reject images >8MB or >4096px on the client before upload.
+
+### 2.2 Async Job Processing
+
+Step 6 cannot run inline in the `/scan` request — it would blow the 5-second P95
+target (see §9). Supabase Edge Functions have no native queue, so:
+
+- `/scan` writes the receipt synchronously, then fires-and-forgets a call to a
+  `process-receipt` Edge Function (via `fetch` with no `await`, or a `pg_cron`-polled
+  `job_queue` table if at-least-once delivery is required).
+- **MVP (low volume):** fire-and-forget is acceptable; a failed downstream job just
+  means a slightly stale nutrition/price view until the next receipt triggers a
+  recompute.
+- **Phase 2+ (after bank sync, higher volume):** replace fire-and-forget with a real
+  queue (`job_queue` Postgres table + `pg_cron` worker, or migrate to Inngest/Trigger.dev)
+  so failed jobs are retried and observable instead of silently dropped.
+- Every async job writes a row to `job_runs (job_name, entity_id, status, error, attempts)`
+  so failures are queryable, not just logged.
+
 ### Claude Extraction Prompt (v1)
 ```
 You are a receipt parser. Extract the following from this OCR text.
@@ -242,6 +284,33 @@ CREATE POLICY "user_own_data" ON receipts
 -- Repeat for all tables
 ```
 
+### Migration Strategy
+
+- All schema changes go through `supabase/migrations/*.sql`, generated via
+  `supabase db diff`, committed to version control — never edited directly via the
+  Supabase dashboard in staging/production.
+- CI runs every migration against a throwaway database on each PR (`supabase db
+  reset` + migrate) to catch broken migrations before merge.
+- Additive changes (new nullable column, new table) ship same-day. Breaking changes
+  (column drop/rename, NOT NULL on existing column) require a two-step migration:
+  add new shape → backfill + dual-write in app code → remove old shape in a
+  follow-up release, never in one step, since the mobile app cannot be force-updated
+  instantly on iOS/Android.
+
+### Data Retention & Deletion
+
+| Data | Retention | Deletion trigger |
+|---|---|---|
+| Receipt images (Supabase Storage) | 12 months, then auto-purged by scheduled job (image no longer needed once `extracted_data` is confirmed) | Scheduled `pg_cron` job + user-initiated delete |
+| `receipts` / `receipt_items` / `purchase_history` rows | Indefinite while account active (this *is* the product's core asset) | Full CASCADE delete on account deletion |
+| `bank_transactions` | Indefinite while bank connection active | Deleted on disconnect (CDR requires honouring revocation promptly) + CASCADE on account deletion |
+| Raw OCR text (`receipts.raw_ocr_text`) | 30 days, then nulled out (debugging window only, not needed long-term and is the most sensitive raw field) | Scheduled job |
+| Account deletion request | Full purge within 30 days (NDB/Privacy Act 1988 compliance) | User-initiated via Settings → "Delete my data", confirmed via email |
+
+This must be implemented before public launch (Phase 2), not deferred — the Privacy
+Act 1988 deletion-rights obligation already applies during closed beta once any
+non-test user data is collected.
+
 ---
 
 ## 4. Mobile Architecture
@@ -313,8 +382,80 @@ All backend logic runs in Supabase Edge Functions (Deno runtime).
 | `/prices/compare` | POST | Price comparison for list of items |
 | `/bank/connect` | POST | Initiate Basiq OAuth flow |
 | `/bank/sync` | POST | Fetch + categorise new transactions |
+| `/bank/webhook` | POST | Receives Basiq async transaction-sync notifications |
+| `/billing/webhook` | POST | Receives Stripe subscription lifecycle events |
 | `/chat` | WS | AI chat (Claude) for natural language queries |
 | `/digest/weekly` | POST | Generate + push weekly digest notification |
+
+All endpoints are versioned under `/v1/` (e.g. `/v1/scan`) from day one — breaking
+response-shape changes ship as `/v2/...` rather than mutating `/v1/` in place, since
+the mobile client cannot be force-upgraded.
+
+### 5.1 Request/Response Contracts (MVP-critical endpoints)
+
+**`POST /v1/scan`**
+```jsonc
+// Request
+{
+  "image_base64": "...",
+  "idempotency_key": "uuid-v4",      // required, see §2.1
+  "captured_at": "2026-06-02T08:14:00Z"
+}
+// Response 200
+{
+  "receipt_id": "uuid",
+  "status": "confirmed" | "needs_review",
+  "store_name": "Woolworths",
+  "store_type": "grocery",
+  "purchase_date": "2026-06-02",
+  "items": [
+    { "id": "uuid", "name": "Milk 2L", "quantity": 1, "unit_price": 2.80, "confidence": 0.97 }
+  ],
+  "subtotal": 84.20, "gst": 8.42, "total": 87.40,
+  "low_confidence_fields": ["items[3].name"]
+}
+// Response 422 (unrecoverable — route client to manual entry)
+{ "error": "extraction_failed", "raw_ocr_text": "..." }
+```
+
+**`PATCH /v1/scan/confirm`**
+```jsonc
+// Request
+{ "receipt_id": "uuid", "corrections": [{ "item_id": "uuid", "name": "Full Cream Milk 2L" }] }
+// Response 200
+{ "receipt_id": "uuid", "status": "confirmed" }
+```
+
+**`GET /v1/nutrition/summary?week_start=2026-06-01`**
+```jsonc
+// Response 200
+{
+  "week_start": "2026-06-01",
+  "coverage_pct": 78.5,              // % of items successfully mapped to a food DB
+  "macros": { "energy_kj": 48200, "protein_g": 312, "carbs_g": 880, "fat_g": 240, "fibre_g": 95, "sugar_g": 410 },
+  "micros_pct_of_adg": { "iron": 35, "calcium": 88, "vitamin_d": 18, "folate": 102 },
+  "low_flags": ["iron", "vitamin_d"],
+  "disclaimer": "General dietary guidance only, not medical advice."
+}
+```
+
+Every endpoint returns a consistent error envelope on failure —
+`{ "error": "<machine_code>", "message": "<human readable>", "retryable": true|false }`
+— so the client can branch on `retryable` instead of parsing HTTP status alone.
+
+### 5.2 Webhook Handling
+
+`/bank/webhook` (Basiq) and `/billing/webhook` (Stripe) are public, unauthenticated-by-design
+endpoints, so they need their own controls distinct from the JWT-protected user endpoints:
+
+- **Signature verification first, before any parsing** — reject with 401 if the
+  Stripe `Stripe-Signature` header or Basiq webhook signature doesn't validate.
+- **Idempotent processing** — store `(provider, event_id)` in a `webhook_events` table
+  with a unique constraint; if the event was already processed, return 200 immediately
+  without reprocessing (both providers retry on anything other than a fast 2xx).
+- **Fast ack, slow process** — acknowledge within 3 seconds, do heavy work (e.g. full
+  transaction re-sync) in the same async job pattern as §2.2, not inline in the
+  webhook handler, or the provider will time out and retry, causing duplicate events.
 
 ---
 
@@ -404,3 +545,61 @@ Claude generates natural language response → display to user
 | 10K–100K users | Supabase + read replicas | Add read replica, Redis cache |
 | 100K–1M users | Dedicated Postgres + workers | Extract to dedicated cloud, queue-based processing |
 | 1M+ users | Multi-region | CDN, regional DB replicas, background job workers |
+
+---
+
+## 11. Environments
+
+| Environment | Purpose | Supabase project | Notes |
+|---|---|---|---|
+| `local` | Engineer's machine | Supabase CLI local stack (Docker) | Seed data via `supabase/seed.sql`; no real API keys — mocked OCR/Claude/Basiq responses |
+| `staging` | Internal QA, TestFlight internal track | Dedicated Supabase project | Real third-party APIs but sandboxed accounts (Basiq sandbox, Stripe test mode) |
+| `production` | Real users | Dedicated Supabase project | Production API keys, real billing |
+
+Secrets (Anthropic key, Google Vision key, Basiq secret, Stripe secret) live only in
+Supabase Edge Function env vars per environment — never committed, never present in
+the Expo client bundle. The mobile app only ever holds the Supabase anon key (safe to
+expose, constrained entirely by RLS).
+
+## 12. Observability
+
+| Concern | Tool | What to track |
+|---|---|---|
+| Crash reporting | Sentry (mobile + edge functions) | Uncaught exceptions, with `user_id` and `receipt_id` breadcrumbs |
+| Product analytics | PostHog | Funnel: app open → scan tap → scan success → list viewed → premium upgrade |
+| Structured logs | Supabase Edge Function logs (JSON format) | Every external API call logged with `{ provider, endpoint, latency_ms, status, cost_estimate }` |
+| Pipeline health | Custom dashboard (PostHog or Supabase SQL views) | OCR success rate, Claude JSON-parse success rate, % receipts landing in `needs_review`, per-store accuracy |
+| Cost monitoring | Manual weekly review (MVP) → billing alerts (post-MVP) | Vision + Claude + Basiq spend vs forecast in `financial-model.md` |
+| Uptime | Better Uptime / UptimeRobot (free tier) | Ping `/v1/health` every 5 min |
+
+**Alerting thresholds (set before public launch):** OCR success rate <90% over 1hr,
+`needs_review` rate >15% over 1hr, any Edge Function error rate >5% over 15 min,
+Claude API cost >2× daily forecast.
+
+## 13. Testing Strategy
+
+| Layer | Tooling | Scope |
+|---|---|---|
+| Unit | Jest (mobile), Deno test (edge functions) | Repurchase-prediction algorithm, price-saving calculation, nutrition aggregation — all pure functions, test against fixed input/output tables |
+| Golden receipt set | Custom harness, run in CI | 30 real (redacted) receipt images across Woolworths/Coles/ALDI/IGA/pharmacy/utility, asserting extraction accuracy stays ≥ target (§ PRD success metrics) on every PR touching the extraction prompt |
+| Integration | Supabase local stack + Jest | `/scan` → DB write → downstream job, run against local Postgres, third-party calls mocked |
+| E2E (mobile) | Detox or Maestro | Scan → result → list flow on a real/simulated device, run nightly, not on every PR (slow) |
+| Manual QA | Pre-release checklist | Full regression on iOS + Android before each TestFlight/Play submission |
+
+The golden receipt set is the single most important test asset in this project —
+extraction-accuracy regressions are silent and directly determine retention (PRD §5).
+Build it in Phase 0 (week 1–2) before writing the production prompt, not after.
+
+## 14. CI/CD & Release Process
+
+- **Branching:** trunk-based, short-lived feature branches, PR required to merge to `main`.
+- **CI (every PR):** lint, typecheck, unit tests, migration dry-run (§3 Migration Strategy), golden receipt set.
+- **CD:** `main` auto-deploys Edge Functions + migrations to `staging`. Production
+  deploy is a manual promotion (`supabase functions deploy --project-ref prod`) gated
+  on a green staging smoke test, run by whoever is on call that week.
+- **Mobile releases:** EAS Build (Expo) → TestFlight/Play internal track → staged
+  rollout (10% → 50% → 100%) via App Store Connect / Play Console phased release,
+  not big-bang, so a bad build only hits a fraction of users before halt.
+- **Submit to app stores 2 weeks before any hard launch date** (per `roadmap.md`
+  risk-adjusted timeline) — review times are unpredictable, especially for an app
+  requesting camera + financial-account permissions.

@@ -121,3 +121,24 @@ No app combines receipt-level grocery intelligence + Open Banking in Australia.
 4. **AU-first design:** Banking integration (Basiq/CDR), AU supermarkets, ADG nutrition guidelines — global apps don't have this depth.
 
 5. **Combined finance + grocery is sticky:** Users who connect bank AND scan groceries have 3× higher retention than scan-only users (hypothesis — validate in beta).
+
+---
+
+## 9. Research Methodology & Confidence Levels
+
+Numbers in this document were compiled from public market sizing and industry
+reporting at varying confidence — before using any figure in a pitch deck, investor
+conversation, or regulatory filing, re-verify against a primary source. Treat this
+document as directional, not audit-grade.
+
+| Figure | Confidence | Action before high-stakes use |
+|---|---|---|
+| AU grocery retail AU$125B/year, Woolworths/Coles/ALDI share | Medium-high — consistent with widely reported ABS/IBISWorld figures | Cite the specific ABS/IBISWorld report and year when used externally |
+| Combined SAM ~AU$146M ARR | Low — this is a top-down estimate built by multiplying market size by an assumed penetration rate, not a bottom-up build | Rebuild bottom-up from `financial-model.md` §4 scenario MRR × 12 once beta data exists; treat the README's "AU$48B tracked spend" figure as a different (gross transaction volume) metric, not contradictory, and label both clearly wherever shown together |
+| Consumer pain % (e.g. "67% forget what I need") | Low — no cited survey source in original research | Either commission/cite a real AU consumer survey before using in marketing, or rephrase as "commonly reported pain points" without a specific percentage |
+| MyFitnessPal AU churn 60-70% in 3 months | Low — plausible industry pattern, not a sourced AU-specific figure | Do not use this figure in competitive marketing claims without a citable source — risk of an ACL-style substantiation problem if a competitor disputes it |
+| "3× retention" hypothesis (item 5 above) | Explicitly labelled a hypothesis already — keep it that way until beta data exists | Becomes a real metric only after Phase 1/2 beta cohort analysis |
+
+**Recommendation:** before the GTM plan's PR outreach (`gtm-plan.md` §4) goes out
+with any specific number attached, run it past this confidence table — journalists
+and competitors will ask for sources.
