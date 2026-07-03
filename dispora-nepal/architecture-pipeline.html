@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saathi — Doc Scan & Form Fill Pipeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'JetBrains Mono', monospace; background: #020617; min-height: 100vh; padding: 2rem; color: white; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    .header { margin-bottom: 2rem; }
+    .header-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+    .pulse-dot { width: 12px; height: 12px; background: #22d3ee; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.025em; }
+    .subtitle { color: #94a3b8; font-size: 0.875rem; margin-left: 1.75rem; }
+    .diagram-container { background: rgba(15, 23, 42, 0.5); border-radius: 1rem; border: 1px solid #1e293b; padding: 1.5rem; overflow-x: auto; }
+    svg { width: 100%; min-width: 1100px; display: block; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .card { background: rgba(15, 23, 42, 0.5); border-radius: 0.75rem; border: 1px solid #1e293b; padding: 1.25rem; }
+    .card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .card-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .card-dot.cyan { background: #22d3ee; } .card-dot.emerald { background: #34d399; }
+    .card-dot.violet { background: #a78bfa; } .card-dot.amber { background: #fbbf24; }
+    .card-dot.rose { background: #fb7185; } .card-dot.orange { background: #fb923c; }
+    .card h3 { font-size: 0.875rem; font-weight: 600; }
+    .card ul { list-style: none; color: #94a3b8; font-size: 0.75rem; }
+    .card li { margin-bottom: 0.375rem; }
+    .footer { text-align: center; margin-top: 1.5rem; color: #475569; font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-row">
+      <div class="pulse-dot"></div>
+      <h1>Saathi — Doc Scan & Visa Form-Fill Pipeline</h1>
+    </div>
+    <p class="subtitle">Document Upload → Classify → Extract → Validate → Map → Fill → Human Review → Export</p>
+  </div>
+
+  <div class="diagram-container">
+    <svg viewBox="0 0 1100 760">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+        </marker>
+        <marker id="arrow-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+        </marker>
+        <marker id="arrow-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+        </marker>
+        <marker id="arrow-amber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24" />
+        </marker>
+        <marker id="arrow-rose" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#fb7185" />
+        </marker>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)" />
+
+      <!-- ===== STAGE 1: UPLOAD ===== -->
+      <rect x="20" y="40" width="130" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="85" y="62" fill="white" font-size="11" font-weight="600" text-anchor="middle">1. UPLOAD</text>
+      <text x="85" y="76" fill="#94a3b8" font-size="8" text-anchor="middle">PDF, PNG, JPG, HEIC</text>
+      <text x="85" y="88" fill="#94a3b8" font-size="8" text-anchor="middle">max 10 files / 20MB</text>
+
+      <!-- Arrow 1→2 -->
+      <line x1="150" y1="70" x2="190" y2="70" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+      <text x="170" y="64" fill="#64748b" font-size="8" text-anchor="middle">classify</text>
+
+      <!-- ===== STAGE 2: CLASSIFY ===== -->
+      <rect x="195" y="40" width="130" height="60" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="260" y="62" fill="white" font-size="11" font-weight="600" text-anchor="middle">2. CLASSIFY</text>
+      <text x="260" y="76" fill="#94a3b8" font-size="8" text-anchor="middle">Claude Vision</text>
+      <text x="260" y="88" fill="#94a3b8" font-size="8" text-anchor="middle">doc_type prediction</text>
+
+      <!-- Arrow 2→3 -->
+      <line x1="325" y1="70" x2="365" y2="70" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+      <text x="345" y="64" fill="#64748b" font-size="8" text-anchor="middle">schema</text>
+
+      <!-- ===== STAGE 3: SCHEMA EXTRACTION ===== -->
+      <rect x="370" y="30" width="145" height="80" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="442" y="52" fill="white" font-size="11" font-weight="600" text-anchor="middle">3. SCHEMA</text>
+      <text x="442" y="52" fill="white" font-size="11" font-weight="600" text-anchor="middle">EXTRACT</text>
+      <text x="442" y="68" fill="#94a3b8" font-size="8" text-anchor="middle">Claude Vision +</text>
+      <text x="442" y="80" fill="#94a3b8" font-size="8" text-anchor="middle">typed schema JSON</text>
+      <text x="442" y="92" fill="#34d399" font-size="8" text-anchor="middle">HIGH conf → auto-fill</text>
+
+      <!-- Arrow 3→4 -->
+      <line x1="515" y1="70" x2="555" y2="70" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+      <text x="535" y="64" fill="#64748b" font-size="8" text-anchor="middle">open</text>
+
+      <!-- ===== STAGE 4: OPEN EXTRACTION ===== -->
+      <rect x="560" y="30" width="130" height="80" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="625" y="52" fill="white" font-size="11" font-weight="600" text-anchor="middle">4. OPEN</text>
+      <text x="625" y="66" fill="white" font-size="11" font-weight="600" text-anchor="middle">EXTRACT</text>
+      <text x="625" y="82" fill="#94a3b8" font-size="8" text-anchor="middle">Claude Vision</text>
+      <text x="625" y="94" fill="#94a3b8" font-size="8" text-anchor="middle">all name-value pairs</text>
+
+      <!-- Arrow 4→5 -->
+      <line x1="690" y1="70" x2="730" y2="70" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+      <text x="710" y="64" fill="#64748b" font-size="8" text-anchor="middle">merge</text>
+
+      <!-- ===== STAGE 5: MERGE & DEDUP ===== -->
+      <rect x="735" y="40" width="130" height="60" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="800" y="62" fill="white" font-size="11" font-weight="600" text-anchor="middle">5. MERGE</text>
+      <text x="800" y="76" fill="#94a3b8" font-size="8" text-anchor="middle">dedup + cross-check</text>
+      <text x="800" y="88" fill="#94a3b8" font-size="8" text-anchor="middle">consistency verify</text>
+
+      <!-- Arrow 5→6 -->
+      <line x1="865" y1="70" x2="905" y2="70" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+
+      <!-- ===== STAGE 6: VALIDATE ===== -->
+      <rect x="910" y="30" width="145" height="80" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="982" y="52" fill="white" font-size="11" font-weight="600" text-anchor="middle">6. VALIDATE</text>
+      <text x="982" y="68" fill="#94a3b8" font-size="8" text-anchor="middle">MRZ checksum</text>
+      <text x="982" y="80" fill="#94a3b8" font-size="8" text-anchor="middle">date plausibility</text>
+      <text x="982" y="92" fill="#a78bfa" font-size="8" text-anchor="middle">→ HIGH/MED/LOW/FAIL</text>
+
+      <!-- ===== BRANCHING FROM VALIDATE ===== -->
+      <!-- HIGH branch — straight down -->
+      <line x1="982" y1="110" x2="982" y2="145" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+      <rect x="920" y="150" width="125" height="45" rx="6" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="982" y="168" fill="white" font-size="10" font-weight="600" text-anchor="middle">HIGH ≥85%</text>
+      <text x="982" y="183" fill="#34d399" font-size="8" text-anchor="middle">→ auto-fill (green)</text>
+
+      <!-- MEDIUM branch — right-down diagonal -->
+      <line x1="982" y1="110" x2="1030" y2="145" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+      <rect x="985" y="150" width="125" height="45" rx="6" fill="rgba(251, 191, 36, 0.1)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="1047" y="168" fill="white" font-size="10" font-weight="600" text-anchor="middle">MED 50–84%</text>
+      <text x="1047" y="183" fill="#fbbf24" font-size="8" text-anchor="middle">→ confirm (amber)</text>
+
+      <!-- LOW/FAIL branch — lower right -->
+      <line x1="1047" y1="195" x2="1047" y2="230" stroke="#fb7185" stroke-width="1.5" marker-end="url(#arrow-rose)"/>
+      <rect x="985" y="235" width="125" height="45" rx="6" fill="rgba(136, 19, 55, 0.4)" stroke="#fb7185" stroke-width="1.5"/>
+      <text x="1047" y="253" fill="white" font-size="10" font-weight="600" text-anchor="middle">LOW/FAIL &lt;50%</text>
+      <text x="1047" y="268" fill="#fb7185" font-size="8" text-anchor="middle">→ manual (red)</text>
+
+      <!-- ===== STAGE 7: MAP TO FORM FIELDS ===== -->
+      <line x1="1055" y1="70" x2="1055" y2="360" stroke="#64748b" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="1055" y="355" fill="#64748b" font-size="7" text-anchor="middle">form field</text>
+      <text x="1055" y="364" fill="#64748b" font-size="7" text-anchor="middle">mapping</text>
+      <line x1="1055" y1="368" x2="982" y2="400" stroke="#64748b" stroke-width="1" stroke-dasharray="4,4"/>
+
+      <rect x="910" y="400" width="145" height="55" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="982" y="418" fill="white" font-size="11" font-weight="600" text-anchor="middle">7. MAP TO</text>
+      <text x="982" y="432" fill="white" font-size="11" font-weight="600" text-anchor="middle">FORM FIELDS</text>
+      <text x="982" y="448" fill="#94a3b8" font-size="8" text-anchor="middle">schema → AcroForm names</text>
+
+      <!-- Arrow 7→8 -->
+      <line x1="910" y1="427" x2="870" y2="427" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+
+      <!-- ===== STAGE 8: HUMAN REVIEW ===== -->
+      <rect x="645" y="390" width="220" height="100" rx="6" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="755" y="412" fill="white" font-size="11" font-weight="600" text-anchor="middle">8. HUMAN REVIEW UI</text>
+      <text x="755" y="428" fill="#94a3b8" font-size="8" text-anchor="middle">extracted value ↔ source image snippet</text>
+      <text x="755" y="442" fill="#94a3b8" font-size="8" text-anchor="middle">confirm / correct / enter manually</text>
+      <text x="755" y="456" fill="#94a3b8" font-size="8" text-anchor="middle">bilingual labels: English + Nepali</text>
+      <text x="755" y="470" fill="#22d3ee" font-size="8" text-anchor="middle">EN / नेपाली toggle</text>
+
+      <!-- Arrow 8→9 -->
+      <line x1="645" y1="440" x2="605" y2="440" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+      <!-- ===== STAGE 9: PDF FILL ===== -->
+      <rect x="455" y="400" width="145" height="80" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="527" y="422" fill="white" font-size="11" font-weight="600" text-anchor="middle">9. PDF FILL</text>
+      <text x="527" y="438" fill="white" font-size="11" font-weight="600" text-anchor="middle">(AcroForm)</text>
+      <text x="527" y="454" fill="#94a3b8" font-size="8" text-anchor="middle">pdf-lib write</text>
+      <text x="527" y="466" fill="#94a3b8" font-size="8" text-anchor="middle">annotated output PDF</text>
+      <text x="527" y="478" fill="#a78bfa" font-size="8" text-anchor="middle">Form 80 / 1221</text>
+
+      <!-- Arrow 9→10 -->
+      <line x1="455" y1="440" x2="415" y2="440" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+      <!-- ===== STAGE 10: EXPORT & AUDIT ===== -->
+      <rect x="260" y="390" width="150" height="100" rx="6" fill="rgba(136, 19, 55, 0.4)" stroke="#fb7185" stroke-width="1.5"/>
+      <text x="335" y="412" fill="white" font-size="11" font-weight="600" text-anchor="middle">10. EXPORT &amp;</text>
+      <text x="335" y="426" fill="white" font-size="11" font-weight="600" text-anchor="middle">AUDIT LOG</text>
+      <text x="335" y="442" fill="#94a3b8" font-size="8" text-anchor="middle">download filled PDF</text>
+      <text x="335" y="454" fill="#94a3b8" font-size="8" text-anchor="middle">Supabase: audit trail</text>
+      <text x="335" y="466" fill="#94a3b8" font-size="8" text-anchor="middle">who / what / when</text>
+      <text x="335" y="478" fill="#94a3b8" font-size="8" text-anchor="middle">source docs retained</text>
+
+      <!-- ===== BOTTOM: SUPABASE DB ===== -->
+      <rect x="260" y="540" width="150" height="50" rx="6" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="335" y="562" fill="white" font-size="11" font-weight="600" text-anchor="middle">Supabase</text>
+      <text x="335" y="576" fill="#94a3b8" font-size="8" text-anchor="middle">Postgres + Storage</text>
+      <line x1="335" y1="500" x2="335" y2="538" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4,4"/>
+
+      <!-- ===== LEFT: Claude Vision ===== -->
+      <rect x="20" y="210" width="130" height="50" rx="6" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="85" y="230" fill="white" font-size="11" font-weight="600" text-anchor="middle">Claude API</text>
+      <text x="85" y="244" fill="#fbbf24" font-size="8" text-anchor="middle">Anthropic</text>
+      <line x1="85" y1="260" x2="85" y2="290" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="85" y1="290" x2="195" y2="290" x2="260" y2="110" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="85" y1="100" x2="85" y2="210" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="85" y1="210" x2="195" y2="210" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4"/>
+
+      <!-- ===== LEGEND ===== -->
+      <text x="20" y="620" fill="white" font-size="10" font-weight="600">Legend</text>
+      <rect x="20" y="632" width="16" height="10" rx="2" fill="rgba(8, 51, 68, 0.4)" stroke="#22d3ee" stroke-width="1"/>
+      <text x="42" y="640" fill="#94a3b8" font-size="8">Frontend / User-Facing</text>
+      <rect x="180" y="632" width="16" height="10" rx="2" fill="rgba(6, 78, 59, 0.4)" stroke="#34d399" stroke-width="1"/>
+      <text x="202" y="640" fill="#94a3b8" font-size="8">Extraction (Claude)</text>
+      <rect x="350" y="632" width="16" height="10" rx="2" fill="rgba(76, 29, 149, 0.4)" stroke="#a78bfa" stroke-width="1"/>
+      <text x="372" y="640" fill="#94a3b8" font-size="8">Storage / Data</text>
+      <rect x="500" y="632" width="16" height="10" rx="2" fill="rgba(120, 53, 15, 0.3)" stroke="#fbbf24" stroke-width="1"/>
+      <text x="522" y="640" fill="#94a3b8" font-size="8">External API</text>
+      <rect x="660" y="632" width="16" height="10" rx="2" fill="rgba(136, 19, 55, 0.4)" stroke="#fb7185" stroke-width="1"/>
+      <text x="682" y="640" fill="#94a3b8" font-size="8">Security / Audit</text>
+
+      <!-- Confidence tier legend -->
+      <text x="20" y="660" fill="white" font-size="10" font-weight="600">Confidence Routing</text>
+      <rect x="20" y="672" width="14" height="8" rx="2" fill="rgba(6, 78, 59, 0.6)"/>
+      <text x="40" y="679" fill="#34d399" font-size="8">HIGH ≥85% → auto-fill</text>
+      <rect x="180" y="672" width="14" height="8" rx="2" fill="rgba(251, 191, 36, 0.2)"/>
+      <text x="200" y="679" fill="#fbbf24" font-size="8">MED 50–84% → user confirm</text>
+      <rect x="370" y="672" width="14" height="8" rx="2" fill="rgba(136, 19, 55, 0.6)"/>
+      <text x="390" y="679" fill="#fb7185" font-size="8">LOW/FAIL &lt;50% → manual entry</text>
+
+      <!-- Metadata footer -->
+      <text x="20" y="720" fill="#475569" font-size="8">Saathi — Diaspora Nepal MVP</text>
+      <text x="20" y="733" fill="#475569" font-size="8">Form Helper (F4) — Document Scan &amp; Visa Form-Fill Architecture</text>
+      <text x="20" y="746" fill="#475569" font-size="8">Built with: Claude Vision + pdf-lib + FastAPI + Supabase | July 4, 2026</text>
+    </svg>
+  </div>
+
+  <!-- Info Cards -->
+  <div class="cards">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot cyan"></div>
+        <h3>Pipeline Technology</h3>
+      </div>
+      <ul>
+        <li>• Claude Vision (Anthropic) — Devanagari + English OCR</li>
+        <li>• pdf-lib — AcroForm field population</li>
+        <li>• FastAPI — upload + extraction API</li>
+        <li>• Supabase — Postgres + Storage buckets</li>
+        <li>• Next.js PWA — bilingual review UI</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot amber"></div>
+        <h3>Confidence Routing Rules</h3>
+      </div>
+      <ul>
+        <li>• ≥ 85% — auto-fill, green highlight, user can override</li>
+        <li>• 50–84% — pre-fill, amber, explicit confirm required</li>
+        <li>• &lt; 50% — blank, red, user must type manually</li>
+        <li>• MRZ checksum + date plausibility cross-checks</li>
+        <li>• Never guess — low confidence always surfaces to user</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot violet"></div>
+        <h3>Supported Documents</h3>
+      </div>
+      <ul>
+        <li>• Passport (MRZ extraction, checksum validation)</li>
+        <li>• Visa Grant Notice (subclass, dates, conditions)</li>
+        <li>• Payslips x1–3 (ABN, gross, employer name)</li>
+        <li>• Bank Statements (account, BSB, transactions)</li>
+        <li>• Birth Certificate (EN + Devanagari)</li>
+        <li>• Academic Transcript + English Test Result</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot rose"></div>
+        <h3>Bilingual (EN / नेपाली)</h3>
+      </div>
+      <ul>
+        <li>• Source docs are English-language (passports, payslips)</li>
+        <li>• Review UI labels bilingual: "Passport Number / पासपोर्ट नम्बर"</li>
+        <li>• Tooltips in Nepali for unfamiliar form fields</li>
+        <li>• EN ↔ NP toggle in review UI settings</li>
+        <li>• Devanagari extraction supported (Nepali birth certs)</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer">Saathi — Doc Scan &amp; Visa Form-Fill Architecture | research/diaspora-nepal/ | July 4, 2026</p>
+</div>
+</body>
+</html>
