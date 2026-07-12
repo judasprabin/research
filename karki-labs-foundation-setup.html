@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foundation Setup — karki-labs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E9EEF2;--paper-2:#FDFDFB;--ink:#15324B;--ink-soft:#3F6280;--line:#4A7299;
+    --grid:rgba(21,50,75,0.07);--amber:#DD8636;--amber-soft:#F6E4CF;--amber-ink:#8f4f15;
+    --green:#2E8B68;--green-soft:#D7EBE0;--card:#FFFFFF;--border:rgba(21,50,75,0.16);
+    --shadow:0 1px 0 rgba(21,50,75,.04),0 8px 28px -16px rgba(21,50,75,.35);
+    --mono:'Space Mono',ui-monospace,monospace;--display:'Space Grotesk',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--body);color:var(--ink);background-color:var(--paper);
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:28px 28px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--line);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--line);display:inline-block}
+  header.hero{padding:64px 0 40px}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(32px,5.5vw,54px);line-height:1.03;letter-spacing:-.02em;margin:0 0 18px;max-width:20ch}
+  .hero h1 em{font-style:normal;color:var(--amber)}
+  .lede{font-size:clamp(16px,2.3vw,20px);max-width:60ch;color:var(--ink-soft);margin:0}
+  section{padding:44px 0;border-top:1px dashed var(--border)}
+  .sec-title{font-family:var(--display);font-weight:600;font-size:clamp(22px,3.4vw,30px);letter-spacing:-.01em;margin:0 0 10px}
+  .sec-sub{color:var(--ink-soft);max-width:64ch;margin:0 0 28px;font-size:15.5px}
+
+  .frame{background:var(--paper-2);border:1px solid var(--border);border-radius:16px;padding:12px;box-shadow:var(--shadow)}
+  svg{display:block;width:100%;height:auto}
+  .cap{font-size:14px;color:var(--ink-soft);margin-top:16px;text-align:center}
+  .cap b{color:var(--amber-ink)}
+
+  /* done chips */
+  .done-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+  .chip{font-family:var(--mono);font-size:12.5px;padding:8px 13px;border-radius:100px;border:1px solid var(--border);background:var(--card);display:inline-flex;align-items:center;gap:8px}
+  .chip.ok{background:var(--green-soft);border-color:rgba(46,139,104,.35);color:var(--green)}
+  .chip.ok::before{content:"✓";font-weight:700}
+  .chip.todo{color:var(--amber-ink);background:var(--amber-soft);border-color:rgba(221,134,54,.4)}
+  .chip.todo::before{content:"→"}
+
+  /* order strip */
+  .strip{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-family:var(--mono);font-size:12px}
+  .strip .s{padding:8px 12px;border:1px solid var(--border);border-radius:9px;background:var(--card)}
+  .strip .arw{color:var(--line)}
+  .strip .fin{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  /* part cards */
+  .part{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 22px 8px;box-shadow:var(--shadow);margin-bottom:18px}
+  .part-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+  .pnum{font-family:var(--mono);font-weight:700;color:var(--amber);background:var(--amber-soft);width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:14px;flex:0 0 auto}
+  .part h3{font-family:var(--display);font-weight:600;font-size:19px;margin:0}
+  .makes{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);background:var(--green-soft);padding:4px 9px;border-radius:6px}
+  .why{color:var(--ink-soft);font-size:14.5px;margin:6px 0 14px;padding-left:42px}
+  .note{padding-left:42px;margin:-6px 0 14px;font-size:13.5px;color:var(--amber-ink);background:var(--amber-soft);border-radius:10px;padding:11px 14px 11px 42px;border-left:3px solid var(--amber)}
+
+  .codewrap{position:relative;margin:0 0 16px}
+  pre{background:#0f2233;color:#DCE7F0;border-radius:12px;padding:16px 16px;overflow-x:auto;font-family:var(--mono);font-size:13px;line-height:1.6;margin:0}
+  pre .c{color:#7FA6BE}
+  .copy{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:11px;color:#0f2233;background:var(--amber);border:none;border-radius:7px;padding:6px 10px;cursor:pointer;letter-spacing:.04em}
+  .copy:active{transform:translateY(1px)}
+  .copy.done{background:var(--green);color:#fff}
+
+  .close{background:var(--ink);color:#E7EEF3;border-radius:18px;padding:34px 30px;margin-top:8px}
+  .close h3{font-family:var(--display);font-weight:700;font-size:24px;color:#fff;margin:0 0 12px}
+  .close p{max-width:62ch;color:#B9C9D6;font-size:15.5px;margin:0 0 10px}
+  footer{padding:36px 0 60px;text-align:center;color:var(--ink-soft);font-family:var(--mono);font-size:12px}
+  :focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:6px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Stage 1 · the manual foundation</p>
+    <h1>The groundwork <em>before</em> Terraform.</h1>
+    <p class="lede">A handful of things must exist by hand before infrastructure-as-code can run — because Terraform itself needs them to start. Here's the shape of it, then the exact steps.</p>
+  </header>
+</div>
+
+<!-- THE PICTURE -->
+<div class="wrap">
+  <section style="border-top:none;padding-top:8px">
+    <p class="eyebrow">The picture</p>
+    <h2 class="sec-title">What lives where</h2>
+    <p class="sec-sub">Your organization is the outer container. Inside it you build one <b>bootstrap project</b> by hand (left) — a "control room" holding Terraform's memory and identity. Everything on the right is what Terraform will create <em>for</em> you afterwards.</p>
+    <div class="frame">
+      <svg viewBox="0 0 960 470" role="img" aria-label="Diagram: the organization nepalimaan.com contains a bootstrap project you build by hand, holding a state bucket and a terraform service account, and two folders nonprod and prod which will hold the environment projects Terraform creates.">
+        <defs><style>
+          .b{fill:#fff;stroke:#15324B;stroke-width:1.5}
+          .t{font-family:'Space Grotesk',sans-serif;font-weight:600;fill:#15324B}
+          .m{font-family:'Space Mono',monospace;fill:#3F6280}
+          .body{font-family:'Inter',sans-serif;fill:#3F6280}
+        </style></defs>
+
+        <!-- org -->
+        <rect x="16" y="28" width="928" height="426" rx="16" fill="#FDFDFB" stroke="#15324B" stroke-width="1.5"/>
+        <text x="34" y="52" class="m" font-size="12">ORGANIZATION  ·  nepalimaan.com  ·  190096138732</text>
+
+        <!-- divider -->
+        <line x1="404" y1="72" x2="404" y2="438" stroke="#3F6280" stroke-width="1.4" stroke-dasharray="5 5"/>
+        <text x="210" y="90" text-anchor="middle" class="m" font-size="11" fill="#8f4f15">① BUILT BY HAND — the bootstrap</text>
+        <text x="678" y="90" text-anchor="middle" class="m" font-size="11" fill="#2E8B68">② BUILT BY TERRAFORM</text>
+
+        <!-- bootstrap project -->
+        <rect x="44" y="104" width="330" height="320" rx="12" class="b"/>
+        <text x="60" y="134" class="t" font-size="16">karki-labs-bootstrap</text>
+        <text x="60" y="153" class="m" font-size="11">the control room</text>
+
+        <rect x="64" y="172" width="290" height="106" rx="10" fill="#EEF3F6" stroke="rgba(21,50,75,.16)"/>
+        <text x="80" y="204" class="t" font-size="14">State bucket</text>
+        <text x="80" y="226" class="m" font-size="11">gs://karki-labs-tf-state</text>
+        <text x="80" y="250" class="body" font-size="12.5">Terraform's memory of</text>
+        <text x="80" y="266" class="body" font-size="12.5">what it has built</text>
+
+        <rect x="64" y="292" width="290" height="106" rx="10" fill="#EEF3F6" stroke="rgba(21,50,75,.16)"/>
+        <text x="80" y="324" class="t" font-size="14">terraform-sa</text>
+        <text x="80" y="346" class="m" font-size="11">the identity Terraform acts as</text>
+        <text x="80" y="370" class="body" font-size="12.5">no key file — its identity is</text>
+        <text x="80" y="386" class="body" font-size="12.5">borrowed on demand</text>
+
+        <!-- nonprod folder -->
+        <rect x="430" y="118" width="86" height="18" rx="4" fill="#E4EDF2" stroke="#15324B" stroke-width="1.3"/>
+        <rect x="430" y="132" width="228" height="292" rx="11" fill="#F4F8FA" stroke="#15324B" stroke-width="1.5"/>
+        <text x="448" y="162" class="m" font-size="11">FOLDER</text>
+        <text x="448" y="184" class="t" font-size="17">nonprod</text>
+        <rect x="450" y="238" width="188" height="130" rx="10" fill="#fff" stroke="#DD8636" stroke-width="1.6" stroke-dasharray="6 5"/>
+        <text x="544" y="298" text-anchor="middle" class="t" font-size="13" fill="#8f4f15">karki-labs-nonprod</text>
+        <text x="544" y="320" text-anchor="middle" class="m" font-size="10.5" fill="#DD8636">created by Terraform</text>
+
+        <!-- prod folder -->
+        <rect x="690" y="118" width="66" height="18" rx="4" fill="#E4EDF2" stroke="#15324B" stroke-width="1.3"/>
+        <rect x="690" y="132" width="222" height="292" rx="11" fill="#F4F8FA" stroke="#15324B" stroke-width="1.5"/>
+        <text x="708" y="162" class="m" font-size="11">FOLDER</text>
+        <text x="708" y="184" class="t" font-size="17">prod</text>
+        <rect x="710" y="238" width="184" height="130" rx="10" fill="#fff" stroke="#DD8636" stroke-width="1.6" stroke-dasharray="6 5"/>
+        <text x="802" y="298" text-anchor="middle" class="t" font-size="13" fill="#8f4f15">karki-labs-prod</text>
+        <text x="802" y="320" text-anchor="middle" class="m" font-size="10.5" fill="#DD8636">created by Terraform</text>
+      </svg>
+    </div>
+    <p class="cap">You build the <b>left side</b> by hand today. Terraform, using the state bucket + identity, then creates the <b>dashed boxes on the right</b> — the two environment projects. That handoff is the whole point of Stage 1.</p>
+  </section>
+</div>
+
+<!-- WHERE YOU ARE -->
+<div class="wrap">
+  <section>
+    <p class="eyebrow">Where you are</p>
+    <h2 class="sec-title">Done vs. left to do</h2>
+    <div class="done-row">
+      <span class="chip ok">Org created (nepalimaan.com)</span>
+      <span class="chip ok">Billing set up</span>
+      <span class="chip ok">You're org admin</span>
+    </div>
+    <div class="done-row" style="margin-top:6px">
+      <span class="chip todo">Bootstrap project</span>
+      <span class="chip todo">State bucket</span>
+      <span class="chip todo">Terraform identity + access</span>
+      <span class="chip todo">Folders</span>
+    </div>
+    <p class="sec-sub" style="margin-top:22px">The seven parts below, in order:</p>
+    <div class="strip">
+      <span class="s">1 · Variables</span><span class="arw">→</span>
+      <span class="s">2 · Bootstrap project</span><span class="arw">→</span>
+      <span class="s">3 · State bucket</span><span class="arw">→</span>
+      <span class="s">4 · Identity + access</span><span class="arw">→</span>
+      <span class="s">5 · Impersonation</span><span class="arw">→</span>
+      <span class="s">6 · Folders</span><span class="arw">→</span>
+      <span class="s">7 · Verify</span><span class="arw">→</span>
+      <span class="s fin">Terraform takes over</span>
+    </div>
+  </section>
+</div>
+
+<!-- THE STEPS -->
+<div class="wrap">
+  <section>
+    <p class="eyebrow">The setup · run as admin@nepalimaan.com</p>
+    <h2 class="sec-title">Complete foundation, step by step</h2>
+    <p class="sec-sub">Each block has a copy button. Run them top to bottom. If a step errors, stop and check the note before continuing.</p>
+
+    <div class="part">
+      <div class="part-head"><span class="pnum">1</span><h3>Set variables</h3><span class="makes">makes: nothing yet</span></div>
+      <p class="why">Just saves your IDs so the later commands stay short and you don't retype them.</p>
+      <div class="codewrap"><button class="copy">copy</button><pre>export ORG_ID=190096138732
+export REGION=australia-southeast1
+
+gcloud billing accounts list        <span class="c"># copy the ACCOUNT_ID where OPEN = True</span>
+export BILLING_ID=&lt;paste-it-here&gt;</pre></div>
+      <div class="note">If <b>billing accounts list is empty</b>: your billing account is owned by your personal Gmail, so the admin can't see it. Fix — Console → Billing → Account management → add admin@nepalimaan.com as a Billing Account Administrator, then re-run.</div>
+    </div>
+
+    <div class="part">
+      <div class="part-head"><span class="pnum">2</span><h3>Create the bootstrap project</h3><span class="makes">makes: the control room</span></div>
+      <p class="why">The project that will hold Terraform's memory and identity. It is not nonprod or prod — it sits apart so an environment can never delete it.</p>
+      <div class="codewrap"><button class="copy">copy</button><pre>gcloud projects create karki-labs-bootstrap --organization=$ORG_ID
+gcloud config set project karki-labs-bootstrap
+gcloud billing projects link karki-labs-bootstrap --billing-account=$BILLING_ID
+
+<span class="c"># turn on the APIs the control room itself needs</span>
+gcloud services enable \
+  cloudresourcemanager.googleapis.com cloudbilling.googleapis.com \
+  iam.googleapis.com iamcredentials.googleapis.com \
+  serviceusage.googleapis.com storage.googleapis.com</pre></div>
+      <div class="note">If <b>karki-labs-bootstrap is taken</b> (project IDs are globally unique), add digits — e.g. karki-labs-bootstrap-7321 — and use that name everywhere below.</div>
+    </div>
+
+    <div class="part">
+      <div class="part-head"><span class="pnum">3</span><h3>Create the state bucket</h3><span class="makes">makes: Terraform's memory</span></div>
+      <p class="why">A versioned bucket where Terraform records what it built. Versioning means you can recover a previous state if something goes wrong.</p>
+      <div class="codewrap"><button class="copy">copy</button><pre>gcloud storage buckets create gs://karki-labs-tf-state \
+  --project=karki-labs-bootstrap --location=$REGION --uniform-bucket-level-access
+gcloud storage buckets update gs://karki-labs-tf-state --versioning</pre></div>
+    </div>
+
+    <div class="part">
+      <div class="part-head"><span class="pnum">4</span><h3>Create Terraform's identity + grant access</h3><span class="makes">makes: the terraform-sa account</span></div>
+      <p class="why">A service account is a non-human login that Terraform uses. The roles let it create projects and folders, and build networking, GKE, DNS, and registries inside them.</p>
+      <div class="codewrap"><button class="copy">copy</button><pre>gcloud iam service-accounts create terraform-sa \
+  --project=karki-labs-bootstrap --display-name="Terraform"
+
+export TF_SA="terraform-sa@karki-labs-bootstrap.iam.gserviceaccount.com"
+
+<span class="c"># org-level roles: create + build the environments</span>
+for ROLE in \
+  roles/resourcemanager.projectCreator \
+  roles/resourcemanager.folderAdmin \
+  roles/resourcemanager.projectIamAdmin \
+  roles/serviceusage.serviceUsageAdmin \
+  roles/compute.networkAdmin \
+  roles/container.admin \
+  roles/dns.admin \
+  roles/artifactregistry.admin \
+  roles/iam.serviceAccountAdmin \
+  roles/storage.admin; do
+  gcloud organizations add-iam-policy-binding $ORG_ID \
+    --member="serviceAccount:$TF_SA" --role="$ROLE" --condition=None
+done
+
+<span class="c"># let it attach billing to projects it creates</span>
+gcloud billing accounts add-iam-policy-binding $BILLING_ID \
+  --member="serviceAccount:$TF_SA" --role="roles/billing.user"</pre></div>
+      <div class="note">These roles are deliberately broad so you don't hit permission walls while learning. Narrowing them to least-privilege is a later hardening exercise — not now.</div>
+    </div>
+
+    <div class="part">
+      <div class="part-head"><span class="pnum">5</span><h3>Set up impersonation (no key file)</h3><span class="makes">makes: safe access, no secret</span></div>
+      <p class="why">Instead of downloading a secret key file (which can leak), you let your admin account borrow the SA's identity on demand. Nothing to store, nothing to lose.</p>
+      <div class="codewrap"><button class="copy">copy</button><pre><span class="c"># allow YOU to act as the Terraform SA</span>
+gcloud iam service-accounts add-iam-policy-binding $TF_SA \
+  --member="user:admin@nepalimaan.com" \
+  --role="roles/iam.serviceAccountTokenCreator"
+
+<span class="c"># the credentials Terraform will read (sign in as admin@nepalimaan.com)</span>
+gcloud auth application-default login</pre></div>
+    </div>
+
+    <div class="part">
+      <div class="part-head"><span class="pnum">6</span><h3>Create the folders</h3><span class="makes">makes: nonprod + prod shelves</span></div>
+      <p class="why">The two shelves inside your org where the environment projects will live. Terraform will place each project into its folder.</p>
+      <div class="codewrap"><button class="copy">copy</button><pre>gcloud resource-manager folders create --display-name="nonprod" --organization=$ORG_ID
+gcloud resource-manager folders create --display-name="prod"    --organization=$ORG_ID
+gcloud resource-manager folders list --organization=$ORG_ID     <span class="c"># note both FOLDER IDs</span></pre></div>
+      <div class="note">Write down the two folder IDs it prints — Terraform needs them to know which shelf each project goes on.</div>
+    </div>
+
+    <div class="part">
+      <div class="part-head"><span class="pnum">7</span><h3>Verify the whole foundation</h3><span class="makes">makes: confidence</span></div>
+      <p class="why">Five quick checks. When all pass — especially "impersonation OK" — the manual groundwork is complete and Terraform can take over.</p>
+      <div class="codewrap"><button class="copy">copy</button><pre>gcloud projects describe karki-labs-bootstrap --format="value(parent.id)"   <span class="c"># = 190096138732</span>
+gcloud storage ls                                                <span class="c"># shows the tf-state bucket</span>
+gcloud iam service-accounts list --project=karki-labs-bootstrap  <span class="c"># shows terraform-sa</span>
+gcloud resource-manager folders list --organization=$ORG_ID      <span class="c"># shows nonprod + prod</span>
+gcloud auth print-access-token --impersonate-service-account=$TF_SA &gt;/dev/null &amp;&amp; echo "impersonation OK"</pre></div>
+    </div>
+  </section>
+</div>
+
+<!-- HANDOFF -->
+<div class="wrap">
+  <section>
+    <p class="eyebrow">The handoff</p>
+    <h2 class="sec-title">Where Terraform picks up</h2>
+    <p class="sec-sub">Your first Terraform will point at the state bucket, act <em>as</em> terraform-sa via impersonation, and its very first job is to create the two environment projects. The top of that config looks like this:</p>
+    <div class="codewrap"><button class="copy">copy</button><pre>terraform {
+  backend "gcs" {
+    bucket = "karki-labs-tf-state"
+    prefix = "bootstrap/terraform.tfstate"
+  }
+}
+
+provider "google" {
+  impersonate_service_account = "terraform-sa@karki-labs-bootstrap.iam.gserviceaccount.com"
+  region                      = "australia-southeast1"
+}</pre></div>
+    <div class="close">
+      <h3>That's the foundation.</h3>
+      <p>The left side of the diagram — built by hand, once. From here on, everything is code: Terraform reads the state bucket, borrows the terraform-sa identity, and creates <span style="color:#fff;font-family:var(--mono);font-size:13px">karki-labs-nonprod</span> and <span style="color:#fff;font-family:var(--mono);font-size:13px">karki-labs-prod</span> inside their folders.</p>
+      <p>Run Parts 1–7, get "impersonation OK", and you're ready to write your first real infrastructure.</p>
+    </div>
+  </section>
+  <footer>karki-labs · foundation setup · go one part at a time</footer>
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const code = btn.parentElement.querySelector('pre').innerText;
+      navigator.clipboard.writeText(code).then(()=>{
+        btn.textContent='copied ✓';btn.classList.add('done');
+        setTimeout(()=>{btn.textContent='copy';btn.classList.remove('done')},1600);
+      });
+    });
+  });
+</script>
+</body>
+</html>
