@@ -1,0 +1,183 @@
+# ── AU Visa Source Registry — Configuration ──────────────────────────────────
+# Agent discovers and tracks authoritative visa-related pages across official
+# Australian Government domains.  One run crawls all in-scope domains, detects
+# new/updated/dead pages, and upserts into a Notion registry database.
+
+# ── In-scope domains ────────────────────────────────────────────────────────
+# Each entry: base_url, authority label, category hint
+# The crawler fetches the sitemap and/or known key paths.
+domains:
+  - base_url: https://immi.homeaffairs.gov.au
+    authority: Department of Home Affairs
+    key_paths:
+      - /visas/getting-a-visa/visa-listing
+      - /visas/getting-a-visa/visa-processing-times
+      - /help-support/tools/professionals/registration-and-licensing
+      - /news-media/archive
+      - /what-we-do/migration-program-planning-levels
+      - /visa-fees
+
+  - base_url: https://www.homeaffairs.gov.au
+    authority: Department of Home Affairs
+    key_paths:
+      - /about-us/our-portfolios
+      - /news-media
+      - /reports-and-publications
+      - /what-we-do
+
+  - base_url: https://www.legislation.gov.au
+    authority: Australian Government Legislation
+    key_paths:
+      - /Details/C2024C00139     # Migration Act 1958
+      - /Details/F1996B03536     # Migration Regulations 1994
+      - /Search/Migration
+      - /Browse/Results/ByTitle/LegislativeInstruments/InForce/M
+
+  - base_url: https://www.aat.gov.au
+    authority: Administrative Appeals Tribunal
+    key_paths:
+      - /decisions
+      - /migration-and-refugee-division
+
+  - base_url: https://www.art.gov.au
+    authority: Administrative Review Tribunal
+    key_paths:
+      - /migration-decisions
+      - /resources
+
+  - base_url: https://www.mara.gov.au
+    authority: Office of the Migration Agents Registration Authority
+    key_paths:
+      - /consumer-guides
+      - /resources
+      - /news
+
+  - base_url: https://www.studyaustralia.gov.au
+    authority: Australian Government — Study Australia
+    key_paths:
+      - /en
+      - /visa-information
+
+  - base_url: https://www.jobsandskills.gov.au
+    authority: Jobs and Skills Australia
+    key_paths:
+      - /data/skilled-occupation-list
+      - /data/occupation-shortage-list
+
+  - base_url: https://www.treasury.gov.au
+    authority: The Treasury
+    key_paths:
+      - /publication
+      - /migration
+
+  - base_url: https://budget.gov.au
+    authority: Australian Government Budget
+    key_paths:
+      - /content
+
+  # State/Territory nomination pages
+  - base_url: https://www.nsw.gov.au
+    authority: NSW Government
+    key_paths:
+      - /visas-and-migration
+
+  - base_url: https://liveinmelbourne.vic.gov.au
+    authority: Victorian Government
+    key_paths:
+      - /migrate
+
+  - base_url: https://migration.qld.gov.au
+    authority: Queensland Government
+    key_paths:
+      - /skilled
+      - /business-migration
+
+  - base_url: https://migration.wa.gov.au
+    authority: Western Australia Government
+    key_paths:
+      - /services
+      - /occupation-lists
+
+  - base_url: https://migration.sa.gov.au
+    authority: South Australia Government
+    key_paths:
+      - /skilled-migrants
+      - /nomination-options
+
+  - base_url: https://www.abs.gov.au
+    authority: Australian Bureau of Statistics
+    key_paths:
+      - /statistics/people/population
+      - /statistics/people/migration
+
+  - base_url: https://immi.homeaffairs.gov.au
+    authority: Department of Home Affairs
+    key_paths:
+      - /visas/getting-a-visa/visa-listing/skilled-independent-189
+      - /visas/getting-a-visa/visa-listing/skilled-nominated-190
+      - /visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491
+      - /visas/getting-a-visa/visa-listing/temporary-graduate-485
+      - /visas/getting-a-visa/visa-listing/student-500
+      - /visas/getting-a-visa/visa-listing/temporary-skill-shortage-482
+      - /help-support/meeting-our-requirements/health
+      - /help-support/meeting-our-requirements/character
+      - /help-support/meeting-our-requirements/english-language
+
+  - base_url: https://www.skillselect.gov.au
+    authority: SkillSelect — Department of Home Affairs
+    key_paths:
+      - /invitation-rounds
+      - /points-test
+      - /occupation-ceilings
+
+  - base_url: https://immi.homeaffairs.gov.au
+    authority: Department of Home Affairs
+    key_paths:
+      - /form-listing/forms/80
+      - /form-listing/forms/1221
+      - /form-listing/forms/1085
+      - /form-listing/forms
+      - /news-media/archive
+
+# ── Crawler settings ─────────────────────────────────────────────────────────
+crawler:
+  max_pages_per_run: 300            # hard cap on total pages crawled
+  max_pages_per_domain: 15          # max new pages per domain per run
+  request_delay_seconds: 1.0        # polite crawl delay
+  timeout_seconds: 15               # per-request timeout
+  user_agent: "AU-Visa-Source-Registry/1.1 (research agent; +https://hermes-agent.nousresearch.com)"
+
+# Categories for classification
+categories:
+  - visa subclass page
+  - legislation
+  - policy
+  - processing times
+  - fees
+  - occupation list
+  - announcement
+  - form
+  - tribunal decision
+  - annual report
+  - planning levels
+  - consumer guide
+  - statistics
+  - other
+
+# Reliability tiers
+reliability_tiers:
+  1: "legislation / official policy"
+  2: "official guidance"
+  3: "official supporting material"
+
+# ── Notion ───────────────────────────────────────────────────────────────────
+notion:
+  database_name: "AU Visa Source Registry"
+  rate_limit_rps: 2.8
+
+# ── Logging ──────────────────────────────────────────────────────────────────
+log:
+  level: INFO
+  file: logs/au-visa-crawler.log
+  max_bytes: 5242880     # 5 MB
+  backup_count: 3
