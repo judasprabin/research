@@ -150,11 +150,13 @@ crawler:
 # Categories for classification
 categories:
   - visa subclass page
+  - state nomination
   - legislation
   - policy
   - processing times
   - fees
   - occupation list
+  - invitation rounds
   - announcement
   - form
   - tribunal decision
@@ -162,6 +164,8 @@ categories:
   - planning levels
   - consumer guide
   - statistics
+  - settlement info
+  - health & character
   - other
 
 # Reliability tiers
