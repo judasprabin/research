@@ -48,9 +48,13 @@ domains:
   - base_url: https://www.mara.gov.au
     authority: Office of the Migration Agents Registration Authority
     key_paths:
-      - /consumer-guides
-      - /resources
-      - /news
+      - /
+      - /search-the-register-of-migration-agents
+
+  - base_url: https://portal.mara.gov.au
+    authority: Office of the Migration Agents Registration Authority
+    key_paths:
+      - /search-the-register-of-migration-agents
 
   - base_url: https://www.studyaustralia.gov.au
     authority: Australian Government — Study Australia
@@ -61,8 +65,9 @@ domains:
   - base_url: https://www.jobsandskills.gov.au
     authority: Jobs and Skills Australia
     key_paths:
-      - /data/skilled-occupation-list
-      - /data/occupation-shortage-list
+      - /data/occupation-and-industry-profiles/occupations-anzsco
+      - /
+      - /skills-priority-list
 
   - base_url: https://www.treasury.gov.au
     authority: The Treasury
@@ -123,21 +128,20 @@ domains:
       - /help-support/meeting-our-requirements/character
       - /help-support/meeting-our-requirements/english-language
 
-  - base_url: https://www.skillselect.gov.au
-    authority: SkillSelect — Department of Home Affairs
+  - base_url: https://immi.homeaffairs.gov.au
+    authority: Department of Home Affairs
     key_paths:
-      - /invitation-rounds
-      - /points-test
-      - /occupation-ceilings
+      - /visas/working-in-australia/skillselect
+      - /visas/working-in-australia/skillselect/invitation-rounds
+      - /visas/working-in-australia/skillselect/points-test
 
   - base_url: https://immi.homeaffairs.gov.au
     authority: Department of Home Affairs
     key_paths:
-      - /form-listing/forms/80
-      - /form-listing/forms/1221
-      - /form-listing/forms/1085
-      - /form-listing/forms
+      - /help-support/departmental-forms/overview
+      - /help-support/departmental-forms/online-forms
       - /news-media/archive
+      - /what-we-do/migration-program-planning-levels
 
 # ── Crawler settings ─────────────────────────────────────────────────────────
 crawler:
